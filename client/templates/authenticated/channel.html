@@ -4,8 +4,16 @@
 
   <div class="conversation">
     <div id="messages">
-      <div class="messages-list">
-        <!-- We'll output our messages here. -->
+      <div class="messages-list {{#if isLoading}}loading-list{{/if}}">
+        {{#each messages}}
+          {{> message}}
+        {{else}}
+          {{#if isDirect}}
+            <p class="alert alert-warning">You haven't said anything to {{username}} yet. Say hello!</p>
+          {{else}}
+            <p class="alert alert-warning">This channel is pretty quiet. You should way something!</p>
+          {{/if}}
+        {{/each}}
       </div>
     </div>
 
