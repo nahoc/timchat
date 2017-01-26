@@ -4,7 +4,16 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
+accounts-password             # Package pour les mot de passe
+accounts-base             # Package pour la création d'usagers
+check             # Package pour les pattern
+browser-policy             # Pour éviter le cross-site scripting dans les nouveaux browsers
+meteorhacks:ssr             # Server Side Rendering for Meteor
+audit-argument-checks             # This package causes Meteor to require that all arguments passed to methods and publish functions are checked
 meteor-base@1.0.4             # Packages every Meteor app needs to have
+session
+templating
+aldeed:collection2
 mobile-experience@1.0.4       # Packages for a great mobile UX
 mongo@1.1.14                   # The database Meteor supports right now
 blaze-html-templates@1.0.4 # Compile .html files into Meteor Blaze views
