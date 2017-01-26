@@ -14,7 +14,6 @@ babel-runtime@1.0.1
 base64@1.0.10
 binary-heap@1.0.10
 blaze@2.1.9
-blaze-html-templates@1.0.5
 blaze-tools@1.0.10
 boilerplate-generator@1.0.11
 browser-policy@1.0.9
@@ -46,6 +45,8 @@ http@1.1.8
 id-map@1.0.9
 insecure@1.0.7
 jquery@1.11.10
+kadira:blaze-layout@2.3.0
+kadira:flow-router@2.12.1
 launch-screen@1.0.12
 livedata@1.0.18
 localstorage@1.0.12
