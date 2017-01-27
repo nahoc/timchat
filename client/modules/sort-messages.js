@@ -26,7 +26,9 @@ let _decideIfShowHeader = (previousMessage, message) => {
 };
 
 let _mapMessages = (messages) => {
+    // variable temporaire
     let previousMessage;
+    // retourne le dernier message et l'assigne à notre variable temporaire
     return messages.map((message) => {
         _decideIfShowHeader(previousMessage, message);
         previousMessage = message;

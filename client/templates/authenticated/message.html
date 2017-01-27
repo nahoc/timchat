@@ -1,0 +1,14 @@
+<template name="message">
+  <!-- template d'un message -->
+  <div class="message">
+    {{#if showHeader}}
+      <header>
+        <h4>{{name owner}} <span>{{messageTimestamp timestamp}}</span></h4>
+      </header>
+    {{/if}}
+
+    <div class="body">
+      {{{parseMarkdown message}}}
+    </div>
+  </div>
+</template>
