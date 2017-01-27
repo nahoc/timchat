@@ -1,19 +1,18 @@
 /*
- ** Fonction qui nettoie une chaîne de caractère reçue en argument
- ** 1. Met le nom en minuscule
- ** 2. Enlève les caractères spéciaux
- ** 3. Enlève les espaces
+ ** Script qui gère le switch entre les channels
  */
 
 // import
 import setScroll from './set-scroll';
 
 let _establishSubscription = (template, isDirect, channel) => {
+    // subscribtion...
     template.subscribe('channel', isDirect, channel, () => {
         setScroll('messages');
         setTimeout(() => {
             template.loading.set(false);
         }, 300);
+        // délai de 300ms
     });
 };
 
