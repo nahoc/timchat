@@ -1,6 +1,8 @@
 // import
-import seedDatabase from './modules/seed-database';
+import setBrowserPolicies from './modules/set-browser-policies';
+/*import seedDatabase from './modules/seed-database';*/
 
-Meteor.startup( () => {
-  seedDatabase();
+Meteor.startup(() => {
+    setBrowserPolicies();
+    /*seedDatabase();*/
 });

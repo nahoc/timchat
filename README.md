@@ -1,2 +1,5 @@
-# timchat
-Plateforme de chat pour la TIM, conçue avec Meteor.js
+#timCHAT
+
+Platforme de chat pour la TIM, conçue avec Meteor.js
+
+par Cohan Carpentier
