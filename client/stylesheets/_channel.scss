@@ -1,0 +1,163 @@
+$red: #DA5347;
+$blue: #1B9EDB;
+$green: #75BA50;
+
+body.is-channel .container {
+  width: 100%;
+}
+
+.sidebar,
+.conversation {
+  position: fixed;
+  top: 52px;
+  bottom: 0;
+  height: 100%;
+}
+
+.sidebar {
+  left: 0;
+  width: 250px;
+  background: $blue;
+  padding: 20px;
+
+  h5 {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: darken( $blue, 20% );
+    margin: 0;
+  }
+
+  ul {
+    margin: 10px 0 0 -20px;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul:not( :last-child ) {
+    margin-bottom: 20px;
+  }
+
+  li {
+    font-size: 15px;
+  }
+
+  a {
+    display: block;
+    padding: 5px 10px 5px 20px;
+    border-radius: 0 3px 3px 0;
+    color: lighten( $blue, 40% );
+    text-decoration: none;
+    border-left: none;
+  }
+
+  a:hover {
+    background: darken( $blue, 10% );
+  }
+
+  .active a,
+  .active a:hover {
+    background: #fff;
+    color: $blue;
+    border-left: none;
+
+    .unread {
+      background: $blue;
+      color: #fff;
+    }
+  }
+
+  a .unread {
+    position: relative;
+    top: 2px;
+    float: right;
+    background: #fff;
+    color: $blue;
+    font-size: 11px;
+    font-weight: bold;
+    width: 25px;
+    text-align: center;
+    padding: 1px 0 2px;
+    border-radius: 30px;
+  }
+}
+
+.conversation {
+  left: 250px;
+  width: calc( 100% - 250px );
+  background: #fff;
+  border-top: 1px solid #eee;
+
+  .message-input {
+    background: #fff;
+    position: absolute;
+    bottom: 52px;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    border-top: 1px solid #eee;
+  }
+
+  .message-input input {
+    display: block;
+    width: 100%;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 10px;
+  }
+
+  .message-input input:focus {
+    outline: 0;
+    border-color: #ddd;
+  }
+
+  #messages {
+    display: flex;
+    overflow: auto;
+    height: calc( 100% - 122px );
+    background: #fff;
+    padding: 20px 20px 0;
+  }
+
+  .messages-list {
+    width: 100%;
+    max-height: 100%;
+    align-self: flex-end;
+    opacity: 1;
+
+    &.loading-list {
+      opacity: 0;
+    }
+  }
+
+  .messages-list .message:not( :last-child ),
+  .messages-list svg {
+    margin-bottom: 15px;
+  }
+
+  .messages-list .message:last-child {
+    margin-bottom: 20px;
+  }
+
+  .message header h4 {
+    font-size: 14px;
+  }
+
+  .message header h4 span {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #888;
+  }
+
+  .message > *:first-child,
+  .message > header > *:first-child {
+    margin-top: 0px;
+  }
+
+  .message > *:last-child,
+  .message > .body > *:last-child {
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,17 @@
+
+.navbar.navbar-default {
+  border-radius: 0px;
+  background: #fff;
+
+  .navbar-brand > span {
+    position: relative;
+    top: -1px;
+    left: 10px;
+    font-size: 14px;
+    color: #aaa;
+  }
+}
+
+body.is-channel .navbar.navbar-default {
+  border-bottom: none;
+}

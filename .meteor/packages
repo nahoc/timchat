@@ -32,7 +32,7 @@ tracker                 # Meteor's client-side reactive programming library
 twbs:bootstrap
 meteorhacks:fast-render
 es5-shim           # ECMAScript 5 compatibility for older browsers.
-
+themeteorchef:bert # Package for notifications
 momentjs:moment               # Moment.js, a JavaScript date library for parsing, validating, manipulating, and formatting dates, packaged for Meteor.
 ecmascript           # Enable ECMAScript2015+ syntax in app code
 shell-server            # Server-side component of the `meteor shell` command
