@@ -6,35 +6,44 @@ Template.sidebar.onCreated(() => {
     // subscribe de la publication "sidebar"
     template.subscribe('sidebar');
 });
-
 Template.sidebar.helpers({
     currentChannel(name) {
-        let current = FlowRouter.getParam('channel');
-        if (current) {
-            return current === name || current === `@${ name }` ? 'active' : false;
-        }
-    },
-    channels() {
-        // on recoit les channels
-        let channels = Channels.find();
-        if (channels) {
-            return channels;
-        }
-    },
-    users() {
-        // on recoit les users
-        let users = Meteor.users.find({
-            _id: {
-                $not: Meteor.userId()
+            let current = FlowRouter.getParam('channel');
+            if (current) {
+                return current === name || current === `@${ name }` ? 'active' : false;
             }
-        });
-        if (users) {
-            return users;
+        }, channelsCount: function () {
+            // on compte les channels
+            let channels = Channels.find().count();
+            if (channels) {
+                return channels;
+            }
+        }, channels() {
+            // on recoit les channels
+            let channels = Channels.find();
+            if (channels) {
+                return channels;
+            }
         }
-    },
-    fullName(name) {
-        if (name) {
-            return `${ name.first } ${ name.last }`;
+        , usersCount: function () {
+            // on compte les users
+            let users = Meteor.users.find().count();
+            if (users) {
+                return users;
+            }
+        }, users() {
+            // on recoit les users
+            let users = Meteor.users.find({
+                /*_id: {
+                    $not: Meteor.userId()
+                }*/
+            });
+            if (users) {
+                return users;
+            }
+        }, fullName(name) {
+            if (name) {
+                return `${ name.first } ${ name.last }`;
+            }
         }
-    }
 });
