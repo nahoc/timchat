@@ -16,8 +16,15 @@ Meteor.publish('sidebar', function() {
 
             fields: {
                 username: 1,
-                'profile.name': 1
+                'profile': 1
             }
         })
     ];
 });
+
+
+/*Meteor.publish("userStatus", function () {
+    return Meteor.users.find({
+        "status.online": true
+    });
+});*/

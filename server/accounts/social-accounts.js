@@ -14,7 +14,7 @@ Accounts.onCreateUser(function (options, user) {
     }
 
     // twitter informations
-    if (user.services.twitter) {
+    else if (user.services.twitter) {
         if (options.profile) {
             user.profile = options.profile;
             user.username = user.services.twitter.screenName;
@@ -23,15 +23,15 @@ Accounts.onCreateUser(function (options, user) {
     }
 
     // github informations
-    if (user.services.github) {
+    else if (user.services.github) {
         if (options.profile) {
-            user.profile = options.profile;/*
+            user.profile = options.profile;
             user.username = user.services.github.username;
-            user.profile.avatar = "https://avatars3.githubusercontent.com/u/" + user.services.github.id; */
+            user.profile.avatar = "https://avatars3.githubusercontent.com/u/" + user.services.github.id;
         }
     }
     // google informations
-    if (user.services.google) {
+    else if (user.services.google) {
         if (options.profile) {
             user.profile = options.profile;
             user.username = user.services.google.given_name;

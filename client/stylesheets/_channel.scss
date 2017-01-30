@@ -131,8 +131,16 @@ body.is-channel .container {
             opacity: 0;
         }
     }
-    .messages-list .message:last-child {
-        margin-bottom: 20px;
+    .message {
+        position: relative;
+        padding-left: calc(36px + .625rem);
+    }
+    .message .avatar {
+        float: left;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        border-radius: 3.2px;
     }
     .message header h4 {
         font-size: 15px;

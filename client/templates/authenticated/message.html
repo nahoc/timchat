@@ -2,6 +2,7 @@
   <!-- template d'un message -->
   <div class="message">
     {{#if showHeader}}
+      <img class="avatar" src="{{avatar owner}}" alt="Avatar" width="36" height="36" />
       <header>
         <h4>{{name owner}} <span>{{messageTimestamp timestamp}}</span></h4>
       </header>
