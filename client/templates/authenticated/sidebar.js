@@ -8,42 +8,51 @@ Template.sidebar.onCreated(() => {
 });
 Template.sidebar.helpers({
     currentChannel(name) {
-            let current = FlowRouter.getParam('channel');
-            if (current) {
-                return current === name || current === `@${ name }` ? 'active' : false;
-            }
-        }, channelsCount: function () {
-            // on compte les channels
-            let channels = Channels.find().count();
-            if (channels) {
-                return channels;
-            }
-        }, channels() {
-            // on recoit les channels
-            let channels = Channels.find();
-            if (channels) {
-                return channels;
-            }
+        let current = FlowRouter.getParam('channel');
+        if (current) {
+            return current === name || current === `@${ name }` ? 'active' : false;
         }
-        , usersCount: function () {
-            // on compte les users
-            let users = Meteor.users.find().count();
-            if (users) {
-                return users;
-            }
-        }, users() {
-            // on recoit les users
-            let users = Meteor.users.find({
-                /*_id: {
-                    $not: Meteor.userId()
-                }*/
-            });
-            if (users) {
-                return users;
-            }
-        }, fullName(name) {
-            if (name) {
-                return `${ name.first } ${ name.last }`;
-            }
+    }, channelsCount: function () {
+        // on compte les channels
+        let channels = Channels.find().count();
+        if (channels) {
+            return channels;
         }
+    }, channels() {
+        // on recoit les channels
+        let channels = Channels.find();
+        if (channels) {
+            return channels;
+        }
+    }, usersCount: function () {
+        // on compte les users
+        let users = Meteor.users.find().count();
+        if (users) {
+            return users;
+        }
+    }, usersStatus() {
+        let status = Meteor.users.find({
+            "status.online": true
+        });
+        if (status) {
+            return "statusActive";
+        }
+        else {
+            return "";
+        }
+    }, users() {
+        // on recoit les users
+        let users = Meteor.users.find({
+            /*_id: {
+                $not: Meteor.userId()
+            }*/
+        });
+        if (users) {
+            return users;
+        }
+    }, fullName(name) {
+        if (name) {
+            return `${ name.first } ${ name.last }`;
+        }
+    }
 });

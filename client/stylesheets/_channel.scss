@@ -11,10 +11,23 @@ body.is-channel .container {
     width: 100%;
 }
 
+.logo {
+    height: 22px;
+    float: left;
+    margin-right: 4px;
+}
+
+.channel-name {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
 .sidebar,
 .conversation {
     position: fixed;
-    top: 52px;
+    top: 50px;
     bottom: 0;
     height: 100%;
 }
@@ -27,6 +40,34 @@ body.is-channel .container {
     .prefix {
         margin-right: 3px;
         opacity: 0.6;
+    }
+    .suffix {
+        opacity: 0.6;
+    }
+    .status {
+        width: 9px;
+        height: 9px;
+        border-radius: 9px;
+        display: block;
+        float: left;
+        border: 1px solid #717171;
+        opacity: 0.3;
+        margin-right: 8px;
+        position: relative;
+        top: 8px;
+    }
+    .statusActive {
+        width: 9px;
+        height: 9px;
+        border-radius: 9px;
+        display: block;
+        float: left;
+        border: 0px;
+        background: #ED9F90;
+        opacity: 1;
+        margin-right: 8px;
+        position: relative;
+        top: 8px;
     }
     h5 {
         text-transform: uppercase;
@@ -51,7 +92,6 @@ body.is-channel .container {
     a {
         display: block;
         padding: 0px 10px 0px 20px;
-        padding-bottom: 2px;
         border-radius: 0 3px 3px 0;
         color: rgb(113, 113, 113);
         text-decoration: none;
@@ -65,6 +105,16 @@ body.is-channel .container {
     }
     .active a,
     .active a:hover {
+        .status {
+            color: #625361;
+            border-color: #fff;
+            opacity: 0.5;
+            text-shadow: 1px 1px rgba(0, 0, 0, .1);
+        }
+        .statusActive {
+            background: #fff;
+            opacity: 1;
+        }
         background: #E77562;
         color: #fff;
         font-weight: 400;
@@ -107,7 +157,7 @@ body.is-channel .container {
         display: block;
         width: 100%;
         border: 2px solid #eee;
-        border-radius: 3px;
+        border-radius: 6px;
         height: 40px;
         padding: 5px 10px;
     }

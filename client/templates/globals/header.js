@@ -1,5 +1,14 @@
+// helpers
+Template.header.helpers({
+    currentChannel(name) {
+        let current = FlowRouter.getParam('channel');
+        if (current) {
+            return current;
+        }
+    }
+});
 
-
+// events
 Template.header.events({
   'click .logout' ( event ) {
     event.preventDefault();
