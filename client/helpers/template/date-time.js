@@ -4,10 +4,10 @@
  */
 Template.registerHelper('messageTimestamp', (timestamp) => {
     if (timestamp) {
-        let today = moment().format('YYYY-MM-DD'),
-            datestamp = moment(timestamp).format('YYYY-MM-DD'),
+        let today = moment().format('DD-MM-YYYY'),
+            datestamp = moment(timestamp).format('DD-MM-YYYY'),
             isBeforeToday = moment(today).isAfter(datestamp),
-            format = isBeforeToday ? 'MMMM Do, YYYY hh:mm a' : 'hh:mm a';
+            format = isBeforeToday ? 'MMMM Do, YYYY HH:mm ' : 'HH:mm ';
         return moment(timestamp).format(format);
     }
 });

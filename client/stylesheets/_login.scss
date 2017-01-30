@@ -1,3 +1,52 @@
 .login label {
-  display: block;
+    display: block;
+}
+
+ul {
+    padding-left: 0;
+    li {
+        list-style: none;
+    }
+}
+
+#facebook-login {
+    background: #3b5998;
+    color: #ffffff;
+}
+
+#twitter-login {
+    background: #1DA1F3;
+    color: #ffffff;
+}
+
+#google-login {
+    background: #d34836;
+    color: #ffffff;
+}
+
+#github-login {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.social-logins {
+    border-right: 1px solid #ccc;
+    button {
+        min-width: 242px;
+        margin-bottom: 6px;
+        padding-left: 14px;
+        padding-right: 14px;
+        border: 0;
+        img {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            margin-right: 12px;
+            float: left;
+        }
+        span {
+            position: relative;
+            top: 3px;
+            float: left;
+        }
+    }
 }

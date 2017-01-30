@@ -1,27 +1,27 @@
 <template name="sidebar">
-  <!-- template pour la sidebar -->
-  <aside class="sidebar">
-    <!-- channels -->
-    <h5>Channels</h5>
-    <ul>
-      {{#each channel in channels}}
-        <li class="{{currentChannel channel.name}}">
-          <a href="/messages/{{channel.name}}">
-            #{{channel.name}}
-          </a>
-        </li>
-      {{/each}}
-    </ul>
-    <!-- utilisateurs -->
-    <h5>Usagers</h5>
-    <ul>
-      {{#each user in users}}
-        <li class="{{currentChannel user.username}}">
-          <a href="/messages/@{{user.username}}">
+    <!-- template pour la sidebar -->
+    <aside class="sidebar">
+        <!-- channels -->
+        <h5>Channels</h5>
+        <ul>
+            {{#each channel in channels}}
+            <li class="{{currentChannel channel.name}}">
+                <a href="/messages/{{channel.name}}">
+                    <span class="prefix">#</span>{{channel.name}}
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+        <!-- utilisateurs -->
+        <h5>Usagers</h5>
+        <ul>
+            {{#each user in users}}
+            <li class="{{currentChannel user.username}}">
+                <a href="/messages/@{{user.username}}">
             {{fullName user.profile.name}}
           </a>
-        </li>
-      {{/each}}
-    </ul>
-  </aside>
+            </li>
+            {{/each}}
+        </ul>
+    </aside>
 </template>

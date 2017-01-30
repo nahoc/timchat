@@ -24,12 +24,18 @@ body.is-channel .container {
     width: 220px;
     background: #FAF4F1;
     padding: 20px;
+    .prefix {
+        margin-right: 3px;
+        opacity: 0.6;
+    }
     h5 {
         text-transform: uppercase;
         font-size: 13px;
         font-weight: 700;
         color: rgb(113, 113, 113);
         margin: 0;
+        line-height: 20px;
+        font-variant-ligatures: common-ligatures;
     }
     ul {
         margin: 10px 0 0 -20px;
@@ -84,8 +90,8 @@ body.is-channel .container {
 }
 
 .conversation {
-    left: 250px;
-    width: calc( 100% - 250px);
+    left: 220px;
+    width: calc( 100% - 220px);
     background: #fff;
     border-top: 1px solid #eee;
     .message-input {
@@ -124,26 +130,33 @@ body.is-channel .container {
             opacity: 0;
         }
     }
-    .messages-list .message:not(:last-child),
-    .messages-list svg {
-        margin-bottom: 15px;
-    }
     .messages-list .message:last-child {
         margin-bottom: 20px;
     }
     .message header h4 {
-        font-size: 14px;
+        font-size: 15px;
+        color: rgb(44, 45, 48);
+        font-weight: 900;
+        line-height: 22px;
+        margin-bottom: 0;
+        padding-top: 2px;
     }
     .message header h4 span {
         display: inline-block;
         margin-left: 5px;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: normal;
-        color: #888;
+        color: rgb(158, 158, 166);
+        line-height: 18px;
     }
     .message > *:first-child,
     .message > header > *:first-child {
         margin-top: 0px;
+    }
+    .message .body {
+        line-height: 22px;
+        font-size: 15px;
+        color: rgb(44, 45, 48);
     }
     .message > *:last-child,
     .message > .body > *:last-child {
