@@ -21,3 +21,73 @@
 body.is-channel .navbar.navbar-default {
     border-bottom: none;
 }
+
+.arrow-up-under {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: -9px;
+    right: 16px;
+    z-index: 2;
+}
+
+.arrow-up-over {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    position: absolute;
+    top: -7px;
+    right: 17px;
+    z-index: 3;
+}
+
+.channel-name {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+.dropdown-menu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 6px!important;
+    top: 45px;
+    min-width: 160px;
+    .icon {
+        height: 14px;
+        position: relative;
+        margin-right: 6px;
+    }
+    .files,
+    .question,
+    .off,
+    .gear {
+        top: -1px;
+    }
+}
+
+.navbar-default .navbar-nav > li > a {
+    background: #fff!important;
+}
+
+.dropdown-toggle {
+    .menu-icon {
+        &:hover {
+            cursor: pointer;
+            fill: #fff;
+        }
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+        display: block;
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
