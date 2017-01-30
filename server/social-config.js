@@ -16,8 +16,8 @@ Meteor.startup(function () {
     });
     ServiceConfiguration.configurations.insert({
         service: 'facebook',
-        appId: '1831389847081395',
-        secret: '0d253ee8c86789f7931687b6e6934ea2'
+        appId: '1831388873748159',
+        secret: 'db87bd5502f3c2f468c5153c0c654514'
     });
 
     //google
