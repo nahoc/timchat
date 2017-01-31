@@ -1,11 +1,11 @@
 <template name="menuItems">
     <!-- template pour les paramètres -->
     <div class="slideout-menu">
-        <h3>Menu <a href="#" class="slideout-menu-toggle">×</a></h3>
-        <ul> {{#if currentUser}}
-            <li> <a href="{{pathFor 'deviceNew'}}">Add a Device</a> </li> {{/if}}
-            <li><a href="#">Home <i class="fa fa-angle-right"></i></a></li>
-            <li><a href="#">Tour Information <i class="fa fa-angle-right"></i></a></li>
+        <h3>Paramètres <img src="/cancel.svg" alt="Fermer" class="cancel slideout-menu-toggle"/></h3>
+        <ul>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Thèmes</a></li>
+            <li><a href="#">Autres</a></li>
         </ul>
     </div>
     <!--/.slideout-menu-->

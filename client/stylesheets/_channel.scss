@@ -169,8 +169,10 @@ body.is-channel .container {
     }
     #messages {
         display: flex;
+        float: left;
         overflow: auto;
-        height: calc( 100% - 122px);
+        width: 100%;
+        height: calc(100% - 122px);
         background: #fff;
         padding: 20px 20px 0;
     }
