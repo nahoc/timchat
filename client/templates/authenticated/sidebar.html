@@ -11,7 +11,7 @@
         <h5>Usagers <span class="suffix">({{usersCount}})</span></h5>
         <ul> {{#each user in users}}
             <li class="{{currentChannel user.username}}">
-                <a href="/messages/@{{user.username}}"> <span class="status {{usersStatus}}"></span> {{user.username}} </a>
+                <a href="/messages/@{{user.username}}"> <span class="status {{connectionStatus user}}"></span> {{user.username}} </a>
             </li> {{/each}} </ul>
     </aside>
 </template>

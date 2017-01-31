@@ -30,13 +30,14 @@ Template.sidebar.helpers({
         if (users) {
             return users;
         }
-    }, usersStatus() {
-        let status = Meteor.users.find({
-            "status.online": true
-        });
-        if (status) {
-            return "statusActive";
+    }, connectionStatus: function (userId) {
+        if (userId.status) {
+            // user est en ligne
+            if (userId.status.online) {
+                return "statusActive";
+            }
         }
+        // user est hors ligne
         else {
             return "";
         }

@@ -6,23 +6,12 @@ Meteor.publish('sidebar', function () {
         // retourne tous les channels existants
         Channels.find()
         , // retourne tous les utilisateurs
-        Meteor.users.find({
-            // l'utilisateur ne peut pas s'écrire à lui même
-            // todo: fixer, cela peut être pratique?
-            /*_id: {
-                $ne: this.userId
-            }*/
-        }, {
+        Meteor.users.find({}, {
             fields: {
-                username: 1
-                , 'profile': 1
+                username: 1,
+                'profile': 1,
+                status: 1
             }
         })
     ];
-});
-
-Meteor.publish("userStatus", function () {
-    return Meteor.users.find({
-        "status.online": true
-    });
 });
