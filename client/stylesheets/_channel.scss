@@ -7,6 +7,21 @@ $green: #75BA50;
     -webkit-font-smoothing: antialiased;
 }
 
+body {
+    height: 100%;
+    width: 100%;
+    background: #FAF4F1;
+}
+
+::-webkit-scrollbar {
+    background: #f3f3f3;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d9d9de;
+}
+
 body.is-channel .container {
     width: 100%;
 }
