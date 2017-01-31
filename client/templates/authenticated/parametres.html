@@ -1,0 +1,12 @@
+<template name="menuItems">
+    <!-- template pour les paramètres -->
+    <div class="slideout-menu">
+        <h3>Menu <a href="#" class="slideout-menu-toggle">×</a></h3>
+        <ul> {{#if currentUser}}
+            <li> <a href="{{pathFor 'deviceNew'}}">Add a Device</a> </li> {{/if}}
+            <li><a href="#">Home <i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#">Tour Information <i class="fa fa-angle-right"></i></a></li>
+        </ul>
+    </div>
+    <!--/.slideout-menu-->
+</template>
