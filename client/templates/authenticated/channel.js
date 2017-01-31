@@ -14,25 +14,40 @@ Template.channel.onCreated(() => {
 Template.channel.helpers({
     // si on est en loading
     isLoading() {
-        return Template.instance().loading.get();
-    },
-    // si c'est un message direct
-    isDirect() {
-        return Template.instance().isDirect.get();
-    },
-    username() {
-        return FlowRouter.getParam('channel');
-    },
-    messages() {
-        let messages = Messages.find({}, {
-            sort: {
-                timestamp: 1
+            return Template.instance().loading.get();
+        },
+        // si c'est un message direct
+        isDirect() {
+            return Template.instance().isDirect.get();
+        },
+        username() {
+            return FlowRouter.getParam('channel');
+        },
+        messages() {
+            let messages = Messages.find({}, {
+                sort: {
+                    timestamp: 1
+                }
+            });
+            if (messages) {
+                return sortMessages(messages);
             }
-        });
-        if (messages) {
-            return sortMessages(messages);
+        },
+        // fonction pour changer le contenu du placeholder du input principal
+        inputPlaceholder() {
+            let current = FlowRouter.getParam('channel');
+            if (current) {
+                if (current[0] == "@") {
+                    // on ajoute un "@" devant le nom de la personne
+                    // dans le input
+                    return "Écrire à " + current;
+                } else if (current[0] != "@") {
+                    // on ajout un "#" devant le nom du channel
+                    // dans le input
+                    return "Écrire sur #" + current;
+                }
+            }
         }
-    }
 });
 
 // events

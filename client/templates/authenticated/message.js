@@ -20,6 +20,10 @@ Template.message.helpers({
                 return "/default.png";
             }
         }
+    }, imageLink(message) {
+        // retourne l'URL d'une image dans une balise
+        return /\.(gif|png|jpe?g)$/i.test(message) ? 
+            '<a class="well image-link" href="' + message + '" target="_blank"><img alt="Image" class="image-chat" src="' + message + '"></a>' : null;
     }
 });
 

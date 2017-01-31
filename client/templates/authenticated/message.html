@@ -9,7 +9,7 @@
     {{/if}}
 
     <div class="body">
-      {{{parseMarkdown message}}}
+        {{#autolink}} {{{parseMarkdown message}}} {{{imageLink message}}} {{/autolink}}
     </div>
   </div>
 </template>

@@ -17,6 +17,15 @@ body.is-channel .container {
     margin-right: 4px;
 }
 
+.image-link {
+    display: block;
+    margin-bottom: 10px!important;
+    .image-chat {
+        max-height: 280px;
+        pointer-events: none;
+    }
+}
+
 .sidebar,
 .conversation {
     position: fixed;
@@ -144,7 +153,7 @@ body.is-channel .container {
         bottom: 52px;
         left: 0;
         right: 0;
-        padding: 15px;
+        padding: 15px 20px;
     }
     .message-input input {
         display: block;
@@ -176,7 +185,7 @@ body.is-channel .container {
     }
     .message {
         position: relative;
-        padding-left: calc(36px + .625rem);
+        padding-left: 46px;
     }
     .message .avatar {
         float: left;
@@ -206,6 +215,13 @@ body.is-channel .container {
         margin-top: 0px;
     }
     .message .body {
+        a {
+            color: #08c;
+            &:hover,
+            &:visited {
+                color: #005e99;
+            }
+        }
         line-height: 22px;
         font-size: 15px;
         color: rgb(44, 45, 48);
