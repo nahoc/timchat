@@ -16,34 +16,35 @@ browser-policy                # Pour éviter le cross-site scripting dans les no
 service-configuration
 meteorhacks:ssr               # Server Side Rendering for Meteor
 audit-argument-checks         # This package causes Meteor to require that all arguments passed to methods and publish functions are checked
-meteor-base          # Packages every Meteor app needs to have
+meteor-base                   # Packages every Meteor app needs to have
 session
 templating
 fourseven:scss
 aldeed:collection2
-mobile-experience       # Packages for a great mobile UX
-mongo                # The database Meteor supports right now
+mobile-experience             # Packages for a great mobile UX
+mongo                         # The database Meteor supports right now
 kadira:flow-router
 kadira:blaze-layout
-reactive-var         # Reactive variable for tracker
+reactive-var                                # Reactive variable for tracker
 reactive-dict
-jquery                # Helpful client-side library
-tracker                 # Meteor's client-side reactive programming library
+jquery                                      # Helpful client-side library
+tracker                                     # Meteor's client-side reactive programming library
 twbs:bootstrap
 meteorhacks:fast-render
-es5-shim           # ECMAScript 5 compatibility for older browsers.
-themeteorchef:bert # Package for notifications
-momentjs:moment               # Moment.js, a JavaScript date library for parsing, validating, manipulating, and formatting dates, packaged for Meteor.
-ecmascript           # Enable ECMAScript2015+ syntax in app code
-shell-server            # Server-side component of the `meteor shell` command
+es5-shim                                    # ECMAScript 5 compatibility for older browsers.
+themeteorchef:bert                          # Package for notifications
+momentjs:moment                             # Moment.js, a JavaScript date library for parsing, validating, manipulating, and formatting dates
+ecmascript                                  # Enable ECMAScript2015+ syntax in app code
+shell-server                                # Server-side component of the `meteor shell` command
 alanning:roles
 themeteorchef:seeder
 themeteorchef:commonmark
 risul:moment-timezone
-standard-minifier-css  # CSS minifier run for production mode
-standard-minifier-js    # JS minifier run for production mode
-mizzao:user-status    # Package pour savoir si un user est en ligne
-#sunkay:easy-side-menu-manually-modified   # Package pour menu sur le côté
+standard-minifier-css                       # CSS minifier run for production mode
+standard-minifier-js                        # JS minifier run for production mode
+mizzao:user-status                          # Package pour savoir si un user est en ligne
+#sunkay:easy-side-menu-manually-modified    # Package pour menu sur le côté
 sunkay:easy-side-menu
-copleykj:autolinker    # Package pour autolink des liens
- 
+copleykj:autolinker                         # Package pour autolink des liens
+cfs:standard-packages
+cfs:gridfs

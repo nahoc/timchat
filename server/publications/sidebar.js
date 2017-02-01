@@ -8,10 +8,16 @@ Meteor.publish('sidebar', function () {
         , // retourne tous les utilisateurs
         Meteor.users.find({}, {
             fields: {
-                username: 1,
-                'profile': 1,
-                status: 1
+                username: 1
+                , 'profile': 1
+                , status: 1
             }
         })
     ];
+});
+/*
+ ** Publications des images
+ */
+Meteor.publish('images', function () {
+    return Images.find();
 });

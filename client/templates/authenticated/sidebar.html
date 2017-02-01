@@ -12,10 +12,11 @@
         <ul>
             <li class="{{currentChannel currentUser.username}}">
                 <a href="/messages/@{{currentUser.username}}"> <span class="status {{connectionStatus currentUser}}"></span> {{me}} </a>
-            </li>
-            {{#each user in users}}
+            </li> {{#each user in users}}
             <li class="{{currentChannel user.username}}">
                 <a href="/messages/@{{user.username}}"> <span class="status {{connectionStatus user}}"></span> {{user.username}} </a>
             </li> {{/each}} </ul>
+        <h5>upload</h5>
+        <input type="file" name="hello" class="myFileInput">
     </aside>
 </template>
