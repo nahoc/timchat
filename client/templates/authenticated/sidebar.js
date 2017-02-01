@@ -11,30 +11,37 @@ Template.sidebar.onCreated(() => {
 });
 // helpers
 Template.sidebar.helpers({
-    currentChannel(name) {
+    myUploadedAvatar: function () {
+        return Images.find();
+    }
+    , currentChannel(name) {
         let current = FlowRouter.getParam('channel');
         if (current) {
             return current === name || current === `@${ name }` ? 'active' : false;
         }
-    }, channelsCount: function () {
+    }
+    , channelsCount: function () {
         // on compte les channels
         let channels = Channels.find().count();
         if (channels) {
             return channels;
         }
-    }, channels() {
+    }
+    , channels() {
         // on recoit les channels
         let channels = Channels.find();
         if (channels) {
             return channels;
         }
-    }, usersCount: function () {
+    }
+    , usersCount: function () {
         // on compte les users
         let users = Meteor.users.find().count();
         if (users) {
             return users;
         }
-    }, connectionStatus: function (userId) {
+    }
+    , connectionStatus: function (userId) {
         if (userId.status) {
             // user est en ligne
             if (userId.status.online) {
@@ -45,7 +52,8 @@ Template.sidebar.helpers({
         else {
             return "";
         }
-    }, users() {
+    }
+    , users() {
         // on recoit les users
         let users = Meteor.users.find({
             // on ne veut pas se retrouver dans la liste de tous les users
@@ -56,7 +64,8 @@ Template.sidebar.helpers({
         if (users) {
             return (users);
         }
-    }, me() {
+    }
+    , me() {
         // on veut savoir si c'est moi
         let me = Meteor.users.findOne({
             _id: Meteor.userId()
@@ -64,7 +73,8 @@ Template.sidebar.helpers({
         if (me) {
             return me.username + " (vous)";
         }
-    }, fullName(name) {
+    }
+    , fullName(name) {
         if (name) {
             return `${ name.first } ${ name.last }`;
         }
