@@ -37,7 +37,7 @@ Meteor.startup(function () {
     });
     ServiceConfiguration.configurations.insert({
         service: "github",
-        clientId: '0c984fe9fe66ca2e2c5f',
-        clientSecret: '8fb7ebc1014aba6530cbc58b58be3ff9711f3da9'
+        clientId: '96ba5b8a80917a29b661',
+        clientSecret: 'c465de0a2759393791b0ee6e0493ecb2eb9745e1'
     });
 });
