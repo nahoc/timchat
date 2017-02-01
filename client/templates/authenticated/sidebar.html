@@ -2,14 +2,18 @@
     <!-- template pour la sidebar -->
     <aside class="sidebar">
         <!-- channels -->
-        <h5>Channels <span class="suffix">({{channelsCount}})</span></h5>
+        <h5>Salons <span class="suffix">({{channelsCount}})</span></h5>
         <ul> {{#each channel in channels}}
             <li class="{{currentChannel channel.name}}">
                 <a href="/messages/{{channel.name}}"> <span class="prefix">#</span>{{channel.name}} </a>
             </li> {{/each}} </ul>
         <!-- utilisateurs -->
         <h5>Usagers <span class="suffix">({{usersCount}})</span></h5>
-        <ul> {{#each user in users}}
+        <ul>
+            <li class="{{currentChannel currentUser.username}}">
+                <a href="/messages/@{{currentUser.username}}"> <span class="status {{connectionStatus currentUser}}"></span> {{me}} </a>
+            </li>
+            {{#each user in users}}
             <li class="{{currentChannel user.username}}">
                 <a href="/messages/@{{user.username}}"> <span class="status {{connectionStatus user}}"></span> {{user.username}} </a>
             </li> {{/each}} </ul>

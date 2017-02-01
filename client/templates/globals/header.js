@@ -1,6 +1,6 @@
 // helpers
 Template.header.helpers({
-    currentChannel(name) {
+    currentChannel() {
         let current = FlowRouter.getParam('channel');
         if (current) {
             if(current[0] == "@") {

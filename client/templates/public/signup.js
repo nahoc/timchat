@@ -1,6 +1,6 @@
 // imports
 import signup from '../../modules/signup';
-import sanitizeUsername from '../../modules/cleanup-username';
+import cleanupUsername from '../../modules/cleanup-username';
 
 // après le rendu du template de création d'usager...
 Template.signup.onRendered(() => {
@@ -15,7 +15,7 @@ Template.signup.events({
     'submit form': (event) => event.preventDefault(),
     'keyup [name="username"]' (event) {
         let value = event.target.value,
-            formatted = sanitizeUsername(value);
+            formatted = cleanupUsername(value);
         event.target.value = formatted;
     }
 });

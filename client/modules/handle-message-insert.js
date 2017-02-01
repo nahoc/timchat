@@ -28,6 +28,7 @@ let _handleInsert = (message, event, template) => {
             Bert.alert(error.reason, 'danger');
         } else {
             event.target.value = '';
+            console.log("new mess");
         }
     });
 };
