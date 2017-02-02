@@ -9,8 +9,9 @@ Meteor.publish('sidebar', function () {
         Meteor.users.find({}, {
             fields: {
                 username: 1
-                , 'profile': 1
+                , profile: 1
                 , status: 1
+                , avatar: 1
             }
         })
     ];

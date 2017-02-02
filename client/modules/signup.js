@@ -41,7 +41,7 @@ let validation = () => {
                 // minimum 6 caractères
                 minlength: 6,
                 // minimum 20 caractères
-                maxlength: 20
+                maxlength: 16
             },
             emailAddress: {
                 required: true,

@@ -29,7 +29,7 @@ reactive-var                                # Reactive variable for tracker
 reactive-dict
 jquery                                      # Helpful client-side library
 tracker                                     # Meteor's client-side reactive programming library
-twbs:bootstrap
+twbs:bootstrap                              # Twitter bootstrap
 meteorhacks:fast-render
 es5-shim                                    # ECMAScript 5 compatibility for older browsers.
 themeteorchef:bert                          # Package for notifications
@@ -37,7 +37,7 @@ momentjs:moment                             # Moment.js, a JavaScript date libra
 ecmascript                                  # Enable ECMAScript2015+ syntax in app code
 shell-server                                # Server-side component of the `meteor shell` command
 alanning:roles
-themeteorchef:seeder
+themeteorchef:seeder                        # Package to seed database on startup
 themeteorchef:commonmark
 risul:moment-timezone
 standard-minifier-css                       # CSS minifier run for production mode
@@ -46,5 +46,6 @@ mizzao:user-status                          # Package pour savoir si un user est
 #sunkay:easy-side-menu-manually-modified    # Package pour menu sur le côté
 sunkay:easy-side-menu
 copleykj:autolinker                         # Package pour autolink des liens
-cfs:standard-packages
-cfs:gridfs
+cfs:standard-packages                       # Package for file upload
+cfs:gridfs                                  # Package for file upload
+natestrauser:x-editable-bootstrap           # Pour éditer champs bootstrap

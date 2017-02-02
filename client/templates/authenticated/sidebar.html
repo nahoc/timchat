@@ -16,6 +16,8 @@
             <li class="{{currentChannel user.username}}">
                 <a href="/messages/@{{user.username}}"> <span class="status {{connectionStatus user}}"></span> {{user.username}} </a>
             </li> {{/each}} </ul>
+        <!-- menu de l'utilisateur connecté -->
+        {{> userMenu}}
         <!--<h5>upload</h5>
         <div>
             <ul> {{#each myUploadedAvatar }}

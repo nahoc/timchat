@@ -38,6 +38,10 @@ Accounts.onCreateUser(function (options, user) {
             user.profile.avatar = user.services.google.picture;
         }
     }
+    
+    else {
+        user.avatar = "http://1.bp.blogspot.com/-GtRzlZcfrrM/VMEnoflNCZI/AAAAAAAAmUw/MQRqMf5mZZM/s1600/ariana-grande-all-star.png";
+    }
 
     // on retourne les informations du nouvel utilisateur 
     // en fonction de son mode de connexion

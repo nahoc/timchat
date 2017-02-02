@@ -40,6 +40,7 @@ body.is-channel .container {
         pointer-events: none;
     }
 }
+
 .sidebar,
 .conversation {
     position: fixed;
@@ -53,6 +54,89 @@ body.is-channel .container {
     width: 220px;
     background: #FAF4F1;
     padding: 20px;
+    height: calc(100% - 50px);
+    .user-menu {
+        position: absolute;
+        bottom: 20px;
+        textarea {
+            resize: none;
+        }
+        .popover-content {
+            padding: 4px;
+        }
+        .editableform .form-control {
+            padding: 4px;
+            width: 130px;
+            overflow: hidden;
+        }
+        .editable-buttons {
+            margin-left: 4px;
+            .editable-submit {
+                .glyphicon {
+                    top: 2px;
+                }
+            }
+            .editable-cancel {
+                margin-left: 4px;
+                .glyphicon {
+                    top: 3px;
+                }
+            }
+        }
+        img {
+            float: left;
+            width: 48px;
+            height: 48px;
+            border-radius: 4px;
+        }
+        .user-menu-infos {
+            margin-left: 8px;
+            float: left;
+        }
+        .editable-click {
+            &:hover {
+                border-bottom: dashed 1px #ccc;
+            }
+            border-bottom: none;
+        }
+        h5 {
+            color: #717171;
+            text-transform: none;
+            float: left;
+            clear: none;
+            padding-top: 10px;
+            font-size: 14px;
+            span {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        p {
+            float: left;
+            margin: 0;
+            padding: 0;
+            margin-top: 2px;
+            font-size: 13px;
+            color: #717171;
+            opacity: 0.6;
+            position: relative;
+            padding-left: 14px;
+            .statusActive {
+                float: left;
+                width: 9px;
+                height: 9px;
+                border-radius: 9px;
+                background: rgb(231, 117, 98);
+                opacity: 1.0!important;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 4px;
+                margin-right: 8px;
+            }
+        }
+    }
     .prefix {
         margin-right: 3px;
         opacity: 0.6;
