@@ -1,5 +1,10 @@
+.barre-nav {
+    max-width: 800px;
+}
+
 .navbar {
     border: 0;
+    border-bottom: 1px solid #ccc;
 }
 
 .navbar.navbar-default {
@@ -7,7 +12,7 @@
     background: #fff;
     .navbar-brand {
         width: 220px;
-        background: #FAF4F1;
+        background: #fff;
     }
 }
 
@@ -15,7 +20,7 @@
     font-weight: 900;
     color: #717171;
     font-size: 22px;
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
 body.is-channel .navbar.navbar-default {

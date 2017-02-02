@@ -1,23 +1,23 @@
 <template name="login">
     <div class="row connexion">
-        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="col-xs-12 col-sm-6 col-md-6" style="padding-right:0;">
             {{> socialLogins}}
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="col-xs-12 col-sm-6 col-md-6" style="padding-left:30px;border-left: 1px solid #ccc;">
             <form id="login" class="login">
                 <div class="form-group">
-                    <label for="emailAddress">Email Address</label>
-                    <input type="email" name="emailAddress" class="form-control" placeholder="Email Address">
+                    <label for="emailAddress">Adresse courriel</label>
+                    <input type="email" name="emailAddress" class="form-control" placeholder="Adresse courriel">
                 </div>
                 <div class="form-group">
-                    <label for="password"><span class="pull-left">Password</span> <a class="pull-right" href="{{pathFor 'recover-password'}}">Forgot Password?</a></label>
-                    <input type="password" name="password" class="form-control" placeholder="Password">
+                    <label for="password">Mot de passe <a class="pull-right" href="{{pathFor 'recover-password'}}">Mot de passe oublié?</a></label>
+                    <input type="password" name="password" class="form-control" placeholder="Mot de passe">
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btn btn-success" value="Login">
+                    <input type="submit" class="btn btn-success" value="Se connecter">
                 </div>
             </form>
-            <p>Don't have an account? <a href="{{pathFor 'signup'}}">Sign Up</a>.</p>
+            <p style="font-size:12px;">Pas de compte? <a href="{{pathFor 'signup'}}">Créez-en un!</a></p>
         </div>
     </div>
 </template>

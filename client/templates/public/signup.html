@@ -1,42 +1,43 @@
 <template name="signup">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h4 class="page-header">Sign Up</h4>
-      <form id="signup" class="signup">
-        <div class="row">
-          <div class="col-xs-6">
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" name="firstName" class="form-control" placeholder="First Name">
-            </div>
-          </div>
-          <div class="col-xs-6">
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" name="lastName" class="form-control" placeholder="Last Name">
-            </div>
-          </div>
+    <!-- template création de compte -->
+    <div class="row creation">
+        <div class="col-creation col-xs-12 col-sm-6 col-md-6">
+            <h4 class="page-header">Créer un compte</h4>
+            <form id="signup" class="signup">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="firstName">Prénom</label>
+                            <input type="text" name="firstName" class="form-control" placeholder="Prénom">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="lastName">Nom de famille</label>
+                            <input type="text" name="lastName" class="form-control" placeholder="Nom de famille">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur</label>
+                    <div class="input-group username">
+                        <div class="input-group-addon">@</div>
+                        <input type="text" class="form-control" name="username" placeholder="Nom d'utilisateur">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Adresse courriel</label>
+                    <input type="email" name="emailAddress" class="form-control" placeholder="Adresse courriel">
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" class="form-control" placeholder="Mot de passe">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Créer un compte!">
+                </div>
+            </form>
+            <p>Vous avez déjà un compte? <a href="{{pathFor 'login'}}">Connectez-vous!</a></p>
         </div>
-        <div class="form-group">
-          <label for="username">Username</label>
-          <div class="input-group username">
-            <div class="input-group-addon">@</div>
-            <input type="text" class="form-control" name="username" placeholder="username">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="emailAddress">Email Address</label>
-          <input type="email" name="emailAddress" class="form-control" placeholder="Email Address">
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" class="form-control" placeholder="Password">
-        </div>
-        <div class="form-group">
-          <input type="submit" class="btn btn-success" value="Sign Up">
-        </div>
-      </form>
-      <p>Already have an account? <a href="{{pathFor 'login'}}">Log In</a>.</p>
     </div>
-  </div>
 </template>

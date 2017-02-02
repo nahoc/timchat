@@ -1,9 +1,49 @@
+.recover {
+    background: #fff;
+    padding: 40px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: auto;
+    .col-recover {
+        margin: auto;
+        float: none;
+    }
+    .page-header {
+        margin-top: 0;
+    }
+}
+
+.creation {
+    background: #fff;
+    padding: 40px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: auto;
+    .col-creation {
+        margin: auto;
+        float: none;
+    }
+    .page-header {
+        margin-top: 0;
+    }
+}
+
 .connexion {
     background: #fff;
-    padding: 20px;
+    padding: 40px;
+    padding-top: 55px;
+    padding-bottom: 55px;
     border-radius: 6px;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
     max-width: 800px;
     margin: auto;
     .social-logins {
@@ -13,6 +53,16 @@
         }
     }
     .login {
+        a {
+            font-size: 12px;
+        }
+        float: left;
+        input {
+            min-width: 242px;
+            height: 38px;
+        }
+    }
+    p {
         float: left;
     }
 }
@@ -31,6 +81,7 @@ ul {
 #facebook-login {
     background: #3b5998;
     color: #ffffff;
+    margin-top: 25px;
 }
 
 #twitter-login {
@@ -50,10 +101,10 @@ ul {
 }
 
 .social-logins {
-    border-right: 1px solid #ccc;
+    padding-right: 30px;
     button {
         min-width: 242px;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
         padding-left: 14px;
         padding-right: 14px;
         border: 0;
@@ -65,7 +116,7 @@ ul {
         }
         span {
             position: relative;
-            top: 3px;
+            top: 4px;
             float: left;
         }
     }

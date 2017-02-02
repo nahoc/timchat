@@ -88,7 +88,8 @@ let _validate = (form) => {
     $(form).validate(validation());
 };
 
-export default function(options) {
+// export
+export default function (options) {
     template = options.template;
     _validate(options.form);
 }
