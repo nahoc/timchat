@@ -37,6 +37,7 @@ body.is-channel .container {
     margin-bottom: 10px!important;
     .image-chat {
         max-height: 280px;
+        max-width: 100%;
         pointer-events: none;
     }
 }
@@ -289,6 +290,7 @@ body.is-channel .container {
         height: calc(100% - 122px);
         background: #fff;
         padding: 20px 20px 0;
+        overflow-x: hidden;
     }
     .messages-list {
         width: 100%;
