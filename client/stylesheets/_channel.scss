@@ -55,6 +55,22 @@ body.is-channel .container {
     background: #FAF4F1;
     padding: 20px;
     height: calc(100% - 50px);
+    #labelAvatarUploader {
+        position: absolute;
+        bottom: 22px;
+        left: 20px;
+        height: 48px;
+        width: 48px;
+        display: block;
+        background: transparent;
+        cursor: pointer;
+        z-index: 40;
+        margin: 0;
+        font-size: 0;
+    }
+    .myFileInput {
+        display: none;
+    }
     .user-menu {
         position: absolute;
         bottom: 20px;

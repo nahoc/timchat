@@ -1,4 +1,4 @@
-//import changeUsername from '../../modules/change-username';
+import changeUsername from '../../modules/change-username';
 
 Template.userMenu.helpers({
     name(userId) {

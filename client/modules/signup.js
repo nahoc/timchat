@@ -7,12 +7,12 @@ let _handleSignup = () => {
         username: template.find('[name="username"]').value,
         email: template.find('[name="emailAddress"]').value,
         password: template.find('[name="password"]').value,
-        profile: {
+        /*profile: {
             name: {
                 first: template.find('[name="firstName"]').value,
                 last: template.find('[name="lastName"]').value
             }
-        }
+        }*/
     };
 
     // affichage d'un message de bienvenue
@@ -31,10 +31,10 @@ let validation = () => {
         // règles
         rules: {
             firstName: {
-                required: true
+                required: false
             },
             lastName: {
-                required: true
+                required: false
             },
             username: {
                 required: true,

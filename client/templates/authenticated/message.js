@@ -17,7 +17,7 @@ Template.message.helpers({
             if (user.profile) {
                 return user.profile.avatar;
             } else {
-                return "/default.png";
+                return user.avatar;
             }
         }
     }, imageLink(message) {

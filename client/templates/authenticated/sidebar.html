@@ -16,14 +16,15 @@
             <li class="{{currentChannel user.username}}">
                 <a href="/messages/@{{user.username}}"> <span class="status {{connectionStatus user}}"></span> {{user.username}} </a>
             </li> {{/each}} </ul>
-        <!-- menu de l'utilisateur connecté -->
-        {{> userMenu}}
         <!--<h5>upload</h5>
         <div>
             <ul> {{#each myUploadedAvatar }}
-                <li>{{this.url}}</li> <img src="{{this.url}}"> {{/each}} </ul>
+                <li>{{this.url}}</li> <img src="{{this.url}}"> {{/each}} </ul>-->
             <form>
-                <input type="file" name="infile" class="myFileInput"> </form>
-        </div>-->
+                <label id="labelAvatarUploader" for="avatarUpload">Upload avatar</label>
+                <input id="avatarUpload" type="file" name="infile" class="myFileInput"> </form>
+        <!--</div>-->
+        <!-- menu de l'utilisateur connecté -->
+        {{> userMenu}}
     </aside>
 </template>
