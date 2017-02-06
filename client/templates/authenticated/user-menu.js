@@ -14,10 +14,13 @@ Template.userMenu.helpers({
         avatar(userId) {
             if (userId) {
                 let user = Meteor.users.findOne(userId);
-                if (!user.profile) {
+                if (Meteor.user()) {
+                    if(Meteor.user().profile) {
+                        return user.profile.avatar;
+                    } else {
+                        return user.avatar;
+                    }
                     return user.avatar;
-                } else {
-                    return user.profile.avatar;
                 }
             }
         }
