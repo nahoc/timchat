@@ -40,7 +40,7 @@ Accounts.onCreateUser(function (options, user) {
     }
     
     else {
-        user.avatar = "http://1.bp.blogspot.com/-GtRzlZcfrrM/VMEnoflNCZI/AAAAAAAAmUw/MQRqMf5mZZM/s1600/ariana-grande-all-star.png";
+        user.avatar = "RRin2osxTNzZfKgRd";
     }
 
     // on retourne les informations du nouvel utilisateur 

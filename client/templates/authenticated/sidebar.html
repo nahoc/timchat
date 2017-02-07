@@ -9,7 +9,7 @@
             </li> {{/each}} </ul>
         <!-- utilisateurs -->
         <h5>Usagers <span class="suffix">({{usersCount}})</span></h5>
-        <ul>
+        <ul class="userlist">
             <li class="{{currentChannel currentUser.username}}">
                 <a href="/messages/@{{currentUser.username}}"> <span class="status {{connectionStatus currentUser}}"></span> {{me}} </a>
             </li> {{#each user in users}}

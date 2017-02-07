@@ -56,6 +56,9 @@ body.is-channel .container {
     background: #FAF4F1;
     padding: 20px;
     height: calc(100% - 50px);
+    .userlist {
+        max-height: calc(100vh - 300px);
+    }
     #labelAvatarUploader {
         position: absolute;
         bottom: 22px;
