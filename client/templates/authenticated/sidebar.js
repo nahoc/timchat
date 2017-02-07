@@ -95,7 +95,7 @@ Template.sidebar.events({
                     // tout s'est bien passé
                     var userId = Meteor.userId();
                     var imagesURL = {
-                        "avatar": '/uploads/images-' + fileObj._id + "-" + fileObj.original.name 
+                        "avatar": '/cfs/files/images/' + fileObj._id + "/" + fileObj.original.name 
                     };
                     
                     Meteor.users.update(userId, {
