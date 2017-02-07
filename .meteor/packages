@@ -42,4 +42,6 @@ sunkay:easy-side-menu
 copleykj:autolinker                         # Package pour autolink des liens
 cfs:standard-packages                       # Package for file upload
 cfs:gridfs                                  # Package for file upload
+cfs:filesystem
 natestrauser:x-editable-bootstrap           # Pour éditer champs bootstrap
+ostrio:meteor-root                          # Get current path on your server, where is Meteor application is running

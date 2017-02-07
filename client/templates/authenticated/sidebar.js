@@ -95,13 +95,12 @@ Template.sidebar.events({
                     // tout s'est bien passé
                     var userId = Meteor.userId();
                     var imagesURL = {
-                        "avatar": "/cfs/files/images/" + fileObj._id
+                        "avatar": '/uploads/images-' + fileObj._id + "-" + fileObj.original.name 
                     };
+                    
                     Meteor.users.update(userId, {
                         $set: imagesURL
                     });
-                    // on recharge la page (nécessaire?)
-                    location.reload();
                 }
             });
         });
