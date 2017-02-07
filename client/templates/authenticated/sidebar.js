@@ -101,6 +101,8 @@ Template.sidebar.events({
                     Meteor.users.update(userId, {
                         $set: imagesURL
                     });
+                    // refresh
+                    location.reload();
                 }
             });
         });
