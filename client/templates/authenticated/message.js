@@ -16,20 +16,12 @@ Template.message.helpers({
                     'avatar': 1
                 }
             });
-            var urlAvatar = '/cfs/files/images/' + user.avatar; /*+ "/" + fileObj.original.name*/
-            return /*user.avatar*/ urlAvatar;
-            /*if (user.profile) {
+            if (user.profile) {
                 return user.profile.avatar;
             } else {
-                //return user.avatar;
-                //return '/cfs/files/images/' + user.avatar + "/" + fileObj.original.name;
-                console.log(Images.findOne({
-                    _id: user.avatar
-                }));
-                return Images.findOne({
-                    _id: user.avatar
-                });
-            } */
+                var urlAvatar = '/cfs/files/images/' + user.avatar; /*+ "/" + fileObj.original.name*/
+                return /*user.avatar*/ urlAvatar;
+            }
         }
     }, imageLink(message) {
         // retourne l'URL d'une image dans une balise

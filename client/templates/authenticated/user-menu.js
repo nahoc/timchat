@@ -12,9 +12,13 @@ Template.userMenu.helpers({
             }
         },
         avatar() {
-            return Images.findOne({
-                _id: Meteor.user().avatar
-            });
+            if (!Meteor.user().avatar) {
+                return user.profile.avatar;
+            } else {
+                return Images.findOne({
+                    _id: Meteor.user().avatar
+                });
+            }
             /*if (userId) {
                 let user = Meteor.users.findOne(userId);
 
