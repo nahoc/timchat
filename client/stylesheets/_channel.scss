@@ -57,7 +57,22 @@ body.is-channel .container {
     padding: 20px;
     height: calc(100% - 50px);
     .userlist {
-        max-height: calc(100vh - 300px);
+        max-height: calc(100vh - 290px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        // scrollbar du sidebar
+        &::-webkit-scrollbar {
+            background: #FAF4F1;
+            width: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #E77562;
+        }
+        li {
+            a {
+                white-space: nowrap;
+            }
+        }
     }
     #labelAvatarUploader {
         position: absolute;
