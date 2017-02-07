@@ -41,7 +41,7 @@ let _getUserAvatar = (id) => {
         if (user.profile) {
             return user.profile.avatar;
         } else {
-            return "/default.png";
+            return user.avatar;
         }
     }
 };

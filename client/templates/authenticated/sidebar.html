@@ -22,7 +22,9 @@
             <input id="avatarUpload" type="file" name="infile" class="myFileInput">
         </form>
         <!--</div>-->
-        <!-- menu de l'utilisateur connecté -->
-        {{> userMenu}}
+        <h5>uploads</h5>
+        <img class="avatar" src="{{myUploadedAvatar.url}}" />
+            <!-- menu de l'utilisateur connecté -->
+            {{> userMenu}}
     </aside>
 </template>

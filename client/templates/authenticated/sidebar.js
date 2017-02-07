@@ -3,19 +3,27 @@
  */
 
 // on created
-Template.sidebar.onCreated(() => {
+/*Template.sidebar.onCreated(() => {
     let template = Template.instance();
     // subscribe de la publication "sidebar"
     template.subscribe('sidebar');
     // subscribe de la publication "images"
     template.subscribe('images');
+    this.autorun(() => {
+        this.subscribe('images');
+        this.subscribe('sidebar');
+    });
+});*/
+
+Template.sidebar.onCreated(function () {
+    this.autorun(() => {
+        this.subscribe('images');
+        this.subscribe('sidebar');
+    });
 });
 
 // helpers
 Template.sidebar.helpers({
-    myUploadedAvatar: function () {
-        return Images.find();
-    },
     currentChannel(name) {
         let current = FlowRouter.getParam('channel');
         if (current) {
@@ -86,6 +94,7 @@ Template.sidebar.helpers({
 // events
 Template.sidebar.events({
     'change.myFileInput': function (event, template) {
+        event.preventDefault();
         FS.Utility.eachFile(event, function (file) {
             Images.insert(file, function (err, fileObj) {
                 if (err) {
@@ -95,14 +104,14 @@ Template.sidebar.events({
                     // tout s'est bien passé
                     var userId = Meteor.userId();
                     var imagesURL = {
-                        "avatar": '/cfs/files/images/' + fileObj._id + "/" + fileObj.original.name 
+                        "avatar": /*'/cfs/files/images/' +*/ fileObj._id /*+ "/" + fileObj.original.name*/
                     };
-                    
+
                     Meteor.users.update(userId, {
                         $set: imagesURL
                     });
                     // refresh
-                    location.reload();
+                    //location.reload();
                 }
             });
         });

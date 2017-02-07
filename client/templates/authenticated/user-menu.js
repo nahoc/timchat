@@ -11,18 +11,25 @@ Template.userMenu.helpers({
                 return user.username;
             }
         },
-        avatar(userId) {
-            if (userId) {
+        avatar() {
+            return Images.findOne({
+                _id: Meteor.user().avatar
+            });
+            /*if (userId) {
                 let user = Meteor.users.findOne(userId);
+
                 if (Meteor.user()) {
-                    if(Meteor.user().profile) {
+                    if (Meteor.user().profile) {
                         return user.profile.avatar;
                     } else {
                         return user.avatar;
+                        return Images.findOne({
+                            _id: Meteor.user().avatar
+                        });
                     }
                     return user.avatar;
                 }
-            }
+            }*/
         }
 });
 
