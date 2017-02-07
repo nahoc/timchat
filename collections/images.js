@@ -3,9 +3,17 @@ Images = new FS.Collection("images", {
         path: Meteor.absolutePath + "/public/uploads"
     })],
     filter: {
+        maxSize: 150000, //max 150kb 
         allow: {
             contentTypes: ['image/*'],
             extensions: ['png', 'jpg', 'jpeg', 'gif']
+        },
+        onInvalid: function () {
+            if (Meteor.isClient) {
+                alert("Erreur. Le fichier doit être un png, jpg, jpeg ou gif de moins de 150kb.");
+            } else {
+                console.log("Erreur. Le fichier doit être un png, jpg, jpeg ou gif de moins de 150kb.");
+            }
         }
     }
 });

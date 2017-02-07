@@ -22,6 +22,13 @@
             <input id="avatarUpload" type="file" name="infile" class="myFileInput">
         </form>
         <!--</div>-->
+        <ul>
+            <h5>urls:</h5> {{#each myUploadedAvatar}}
+            <li>
+                <a href="{{this.url}}" target="_blank">lien</a>
+            </li>
+            {{/each}}
+        </ul>
         <!-- menu de l'utilisateur connecté -->
         {{> userMenu}}
     </aside>
