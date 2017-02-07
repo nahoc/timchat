@@ -11,29 +11,21 @@ Template.userMenu.helpers({
                 return user.username;
             }
         },
-        avatar() {
-            if (!Meteor.user().avatar) {
-                return user.profile.avatar;
-            } else {
-                return Images.findOne({
-                    _id: Meteor.user().avatar
-                });
-            }
-            /*if (userId) {
-                let user = Meteor.users.findOne(userId);
-
-                if (Meteor.user()) {
-                    if (Meteor.user().profile) {
-                        return user.profile.avatar;
-                    } else {
-                        return user.avatar;
-                        return Images.findOne({
-                            _id: Meteor.user().avatar
-                        });
+        avatar(userId) {
+            if (userId) {
+                let user = Meteor.users.findOne(userId, {
+                    fields: {
+                        'avatar': 1,
+                        'profile': 1
                     }
+                });
+                if (user.profile && user.profile != "null") {
                     return user.avatar;
+                } else {
+                    var urlAvatar = '/cfs/files/images/' + user.avatar;
+                    return urlAvatar;
                 }
-            }*/
+            }
         }
 });
 

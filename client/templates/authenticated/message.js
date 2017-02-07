@@ -13,14 +13,15 @@ Template.message.helpers({
         if (userId) {
             let user = Meteor.users.findOne(userId, {
                 fields: {
-                    'avatar': 1
+                    'avatar': 1,
+                    'profile': 1
                 }
             });
-            if (user.profile) {
-                return user.profile.avatar;
+            if (user.profile && user.profile != "null") {
+                return user.avatar;
             } else {
-                var urlAvatar = '/cfs/files/images/' + user.avatar; /*+ "/" + fileObj.original.name*/
-                return /*user.avatar*/ urlAvatar;
+                var urlAvatar = '/cfs/files/images/' + user.avatar;
+                return urlAvatar;
             }
         }
     }, imageLink(message) {

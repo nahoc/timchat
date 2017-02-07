@@ -9,7 +9,7 @@ Accounts.onCreateUser(function (options, user) {
         if (options.profile) {
             user.profile = options.profile;
             user.username = user.services.facebook.first_name.replace(/[^A-Za-z0-9\s]/g, '').toLowerCase().trim();
-            user.profile.avatar = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=small";
+            user.avatar = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=small";
         }
     }
 
@@ -18,7 +18,7 @@ Accounts.onCreateUser(function (options, user) {
         if (options.profile) {
             user.profile = options.profile;
             user.username = user.services.twitter.screenName.replace(/[^A-Za-z0-9\s]/g, '').toLowerCase().trim();;
-            user.profile.avatar = "https://twitter.com/" + user.username + "/profile_image?size=normal";
+            user.avatar = "https://twitter.com/" + user.username + "/profile_image?size=normal";
         }
     }
 
@@ -27,7 +27,7 @@ Accounts.onCreateUser(function (options, user) {
         if (options.profile) {
             user.profile = options.profile;
             user.username = user.services.github.username.replace(/[^A-Za-z0-9\s]/g, '').toLowerCase().trim();;
-            user.profile.avatar = "https://avatars3.githubusercontent.com/u/" + user.services.github.id;
+            user.avatar = "https://avatars3.githubusercontent.com/u/" + user.services.github.id;
         }
     }
     // google informations
@@ -35,7 +35,7 @@ Accounts.onCreateUser(function (options, user) {
         if (options.profile) {
             user.profile = options.profile;
             user.username = user.services.google.given_name.replace(/[^A-Za-z0-9\s]/g, '').toLowerCase().trim();;
-            user.profile.avatar = user.services.google.picture;
+            user.avatar = user.services.google.picture;
         }
     }
     
