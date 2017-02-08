@@ -15,8 +15,12 @@
         padding: 20px;
         background: #f7f7f7;
         border-bottom: 1px solid #E8E8E8;
+        width: 250px!important;
+        position: relative;
+        float: left;
     }
     ul {
+        width: 250px!important;
         border: none;
         li {
             border: none;
@@ -29,11 +33,28 @@
                 color: #717171;
                 padding-left: 20px;
                 &:hover {
-                    background: #f7f7f7;
+                    background: rgb(252, 252, 252);
                     color: #717171;
                 }
             }
         }
+    }
+    p {
+        width: 250px!important;
+        padding: 20px;
+        padding-top: 20px;
+        padding-bottom: 8px;
+        margin: 0;
+        float: left;
+        clear: both;
+    }
+    a {
+        white-space: nowrap;
+        width: 250px!important;
+        padding: 20px;
+        padding-top: 20px;
+        float: left;
+        clear: both;
     }
     .cancel {
         width: 24px;
