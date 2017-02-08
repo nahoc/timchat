@@ -113,9 +113,9 @@ Template.sidebar.events({
                         
                         // re-render du template
                         var view = Blaze.getView($("body"))[0];
-                        Blaze.remove(view);
                         setTimeout(function () {
                             console.log("TIMEOUT OVER");
+                            Blaze.remove(view);
                             Blaze.render(view);
                         }, 2000);
                     });
