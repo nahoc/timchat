@@ -110,7 +110,9 @@ Template.sidebar.events({
                         }
                         // notification
                         Bert.alert("Avatar mis à jour avec succès!", 'success');
-                        Blaze.render(Template.sidebar, $('.sidebar').get(0));
+                        setTimeout(function () {
+                            Blaze.render(Template.sidebar, $('.sidebar').get(0));
+                        }, 4000);
                     });
                 }
                 // refresh
