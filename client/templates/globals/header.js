@@ -7,7 +7,8 @@ Template.header.helpers({
                 // on ajoute un "@" devant le nom de la personne
                 // dans le header
                 return current;
-            } else if (current[0] != "@") {
+            }
+            else if (current[0] != "@") {
                 // on ajout un "#" devant le nom du channel
                 // dans le header
                 return "#" + current;
@@ -15,16 +16,15 @@ Template.header.helpers({
         }
     }
 });
-
 // events
 Template.header.events({
     'click .logout' (event) {
         event.preventDefault();
-
         Meteor.logout((error) => {
             if (error) {
                 Bert.alert(error.reason, 'warning');
-            } else {
+            }
+            else {
                 Bert.alert('Vous avez bien été deconnecté!', 'success');
             }
         });
