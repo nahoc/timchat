@@ -1,83 +1,77 @@
 /*
  ** JS de la sidebar; inclus les subscriptions
  */
-
 Template.sidebar.onCreated(function () {
     this.autorun(() => {
         this.subscribe('images');
         this.subscribe('sidebar');
     });
 });
-
 // helpers
 Template.sidebar.helpers({
     currentChannel(name) {
-            let current = FlowRouter.getParam('channel');
-            if (current) {
-                return current === name || current === `@${ name }` ? 'active' : false;
-            }
-        },
-        channelsCount: function () {
-            // on compte les channels
-            let channels = Channels.find().count();
-            if (channels) {
-                return channels;
-            }
-        },
-        channels() {
-            // on recoit les channels
-            let channels = Channels.find();
-            if (channels) {
-                return channels;
-            }
-        },
-        usersCount: function () {
-            // on compte les users
-            let users = Meteor.users.find().count();
-            if (users) {
-                return users;
-            }
-        },
-        connectionStatus: function (userId) {
-            if (userId.status) {
-                // user est en ligne
-                if (userId.status.online) {
-                    return "statusActive";
-                }
-            }
-            // user est hors ligne
-            else {
-                return "";
-            }
-        },
-        users() {
-            // on recoit les users
-            let users = Meteor.users.find({
-                // on ne veut pas se retrouver dans la liste de tous les users
-                _id: {
-                    $not: Meteor.userId()
-                }
-            }, {sort: {username: 1}});
-            if (users) {
-                return (users);
-            }
-        },
-        me() {
-            // on veut savoir si c'est moi
-            let me = Meteor.users.findOne({
-                _id: Meteor.userId()
-            });
-            if (me) {
-                return me.username + " (vous)";
-            }
-        },
-        fullName(name) {
-            if (name) {
-                return `${ name.first } ${ name.last }`;
+        let current = FlowRouter.getParam('channel');
+        if (current) {
+            return current === name || current === `@${ name }` ? 'active' : false;
+        }
+    }, channelsCount: function () {
+        // on compte les channels
+        let channels = Channels.find().count();
+        if (channels) {
+            return channels;
+        }
+    }, channels() {
+        // on recoit les channels
+        let channels = Channels.find();
+        if (channels) {
+            return channels;
+        }
+    }, usersCount: function () {
+        // on compte les users
+        let users = Meteor.users.find().count();
+        if (users) {
+            return users;
+        }
+    }, connectionStatus: function (userId) {
+        if (userId.status) {
+            // user est en ligne
+            if (userId.status.online) {
+                return "statusActive";
             }
         }
+        // user est hors ligne
+        else {
+            return "";
+        }
+    }, users() {
+        // on recoit les users
+        let users = Meteor.users.find({
+            // on ne veut pas se retrouver dans la liste de tous les users
+            _id: {
+                $not: Meteor.userId()
+            }
+        }, {
+            sort: {
+                username: 1
+            }
+        });
+        if (users) {
+            return (users);
+        }
+    }, me() {
+        // on veut savoir si c'est moi
+        let me = Meteor.users.findOne({
+            _id: Meteor.userId()
+        });
+        if (me) {
+            return me.username + " (vous)";
+        }
+    }, fullName(name) {
+        if (name) {
+            return `${ name.first } ${ name.last }`;
+        }
+    }
 });
-
 // events
 Template.sidebar.events({
     'change.myFileInput': function (event, template) {
@@ -87,26 +81,25 @@ Template.sidebar.events({
                 if (err) {
                     // erreur lors de l'upload de l'avatar
                     console.log("Upload error.");
-                } else {
+                    // notification
+                    Bert.alert("Problème lors de la mise à jour de l'avatar.", 'success');
+                }
+                else {
                     // tout s'est bien passé
                     var userId = Meteor.userId();
                     var imagesURL = {
-                        "avatar": /*'/cfs/files/images/' +*/ fileObj._id /*+ "/" + fileObj.original.name*/
+                        "avatar": fileObj._id
                     };
-
                     Meteor.users.update(userId, {
                         $set: imagesURL
                     });
-
-
                     // si social user
                     let user = Meteor.users.findOne(userId, {
                         fields: {
-                            'avatar': 1,
-                            'profile': 1
+                            'avatar': 1
+                            , 'profile': 1
                         }
                     });
-
                     if (user.profile) {
                         Meteor.users.update(userId, {
                             $set: {
@@ -114,10 +107,21 @@ Template.sidebar.events({
                             }
                         });
                     }
-                    // refresh
-                    //location.reload();
+                    // notification*/
+                    Bert.alert("Avatar mis à jour avec succès!", 'success');
                 }
+                // refresh
+                //location.reload();
             });
         });
     }
+});
+// on rendered
+Template.sidebar.onRendered(function () {
+    /*$('#textArea.editable').editable({
+        success: function (response, newValue) {
+            changeUsername(newValue);
+        }
+    });*/
+    console.log("render");
 });
