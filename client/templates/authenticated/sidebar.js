@@ -114,7 +114,6 @@ Template.sidebar.events({
                         // re-render du template
                         setTimeout(function () {
                             console.log("TIMEOUT OVER");
-                            Blaze.remove(Template.channel, $('body').get(0));
                             Blaze.render(Template.channel, $('body').get(0));
                         }, 1500);
                     });
@@ -122,13 +121,4 @@ Template.sidebar.events({
             });
         });
     }
-});
-// on rendered
-Template.sidebar.onRendered(function () {
-    /*$('#textArea.editable').editable({
-        success: function (response, newValue) {
-            changeUsername(newValue);
-        }
-    });*/
-    console.log("render");
 });

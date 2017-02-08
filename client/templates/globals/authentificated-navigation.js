@@ -10,7 +10,10 @@ Template.authenticatedNavigation.events({
                 Bert.alert('Vous avez bien été deconnecté!', 'success');
             }
         });
-    }, 'click .a-propos' (event) {
+    }, 'click .slideout-menu-toggle' (event) {
+        // fonction du slideout menu
+        
+        
         event.preventDefault();
         event.stopPropagation();
         // hide the dropdown
@@ -38,6 +41,16 @@ Template.authenticatedNavigation.events({
             slideoutMenu.animate({
                 right: -slideoutMenuWidth
             }, 250);
+        }
+        
+        // si on clique sur a propos
+        if($(event.target).hasClass('a-propos')) {
+            console.log('a propos');
+        }
+        
+        // si on clique sur parametres
+        if($(event.target).hasClass('parametres')) {
+            console.log('param');
         }
     }
 });
