@@ -1,26 +1,30 @@
 <template name="channel">
-  <!-- template pour les channels dans la sidebar -->
-  {{> sidebar}}
-
-  <div class="conversation">
-    <div id="messages">
-      <div class="messages-list {{#if isLoading}}loading-list{{/if}}">
-        {{#each messages}}
-          {{> message}}
-        {{else}}
-          {{#if isDirect}}
-            <p class="alert alert-warning">You haven't said anything to {{username}} yet. Say hello!</p>
-          {{else}}
-            <p class="alert alert-warning">This channel is pretty quiet. You should way something!</p>
-          {{/if}}
-        {{/each}}
-      </div>
+    <!-- template pour les channels dans la sidebar -->
+    {{> sidebar}}
+    <div class="conversation">
+        <div id="messages">
+            <div class="messages-list {{#if isLoading}}loading-list{{/if}}">
+                {{#each messages}} {{> message}} {{else}} {{#if isDirect}}
+                <p class="alert alert-warning">Dites bonjour à {{username}}!</p>
+                {{else}}
+                <p class="alert alert-warning">C'est tranquille ici...</p>
+                {{/if}} {{/each}}
+            </div>
+        </div>
+        <div class="message-input">
+            <div id="outputText">OUTPUT
+            </div>
+            <input id="message-box" name="message" placeholder="{{inputPlaceholder}}">
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#message-box").on('keyup change input', function (e) {
+                    var source = $('#message-box').val();
+                    var preview = emojione.toImage(source);
+                    $('#outputText').html(preview);
+                });
+            });
+        </script>
     </div>
-
-    <div class="message-input">
-      <input name="message" placeholder="{{inputPlaceholder}}">
-    </div>
-  </div>
-
     {{> slideMenu}}
 </template>
