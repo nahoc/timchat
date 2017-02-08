@@ -111,6 +111,7 @@ Template.sidebar.events({
                         // notification
                         Bert.alert("Avatar mis à jour avec succès!", 'success');
                         setTimeout(function () {
+                            console.log("TIMEOUT OVER");
                             Blaze.render(Template.sidebar, $('.sidebar').get(0));
                         }, 4000);
                     });
