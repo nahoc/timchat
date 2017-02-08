@@ -112,11 +112,9 @@ Template.sidebar.events({
                         Bert.alert("Avatar mis à jour avec succès!", 'success');
                         
                         // re-render du template
-                        var view = Blaze.getView($("body"))[0];
                         setTimeout(function () {
                             console.log("TIMEOUT OVER");
-                            Blaze.remove(view);
-                            Blaze.render(view);
+                            Blaze.render(Template.channel, $('body').get(0));
                         }, 2000);
                     });
                 }

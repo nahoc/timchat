@@ -37,8 +37,7 @@ risul:moment-timezone
 standard-minifier-css                       # CSS minifier run for production mode
 standard-minifier-js                        # JS minifier run for production mode
 mizzao:user-status                          # Package pour savoir si un user est en ligne
-#sunkay:easy-side-menu-manually-modified    # Package pour menu sur le côté
-sunkay:easy-side-menu
+sunkay:easy-side-menu                       # Package pour menu sur le côté
 copleykj:autolinker                         # Package pour autolink des liens
 cfs:standard-packages                       # Package for file upload
 cfs:gridfs                                  # Package for file upload
