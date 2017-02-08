@@ -116,7 +116,7 @@ Template.sidebar.events({
                             console.log("TIMEOUT OVER");
                             Blaze.remove(Template.channel, $('body').get(0));
                             Blaze.render(Template.channel, $('body').get(0));
-                        }, 500);
+                        }, 1500);
                     });
                 }
             });
