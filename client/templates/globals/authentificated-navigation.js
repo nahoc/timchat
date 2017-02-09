@@ -1,6 +1,6 @@
 // events
 Template.authenticatedNavigation.events({
-    'click .logout' (event) {
+    'click .logout' (event, template) {
         event.preventDefault();
         Meteor.logout((error) => {
             if (error) {
@@ -10,10 +10,8 @@ Template.authenticatedNavigation.events({
                 Bert.alert('Vous avez bien été deconnecté!', 'success');
             }
         });
-    }, 'click .slideout-menu-toggle' (event) {
+    }, 'click .slideout-menu-toggle' (event, template) {
         // fonction du slideout menu
-        
-        
         event.preventDefault();
         event.stopPropagation();
         // hide the dropdown
