@@ -1,4 +1,4 @@
-#![alt tag](https://timchat.herokuapp.com/favicon.png) timCHAT
+#![alt tag](http://i.imgur.com/DDRlMrd.png) timCHAT
 
 Platforme de chat pour la TIM, conçue avec Meteor.js
 
