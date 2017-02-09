@@ -47,7 +47,7 @@ let _seedThemes = () => {
             , textColor: '#717171'
             , menuHover: '#EDE5E0'
             , menuActive: '#E77562'
-            , statusActive: '#252525'
+            , statusActive: '#E77562'
             , textColorActive: '#FFFFFF'
         }, {
             name: 'aubergine'

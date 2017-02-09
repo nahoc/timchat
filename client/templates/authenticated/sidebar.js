@@ -81,33 +81,32 @@ Template.sidebar.helpers({
 });
 // events
 Template.sidebar.events({
-    // event lors du changement de theme
     'click .theme-changer': function (event, template) {
-            var themeName = event.target.id;
-            let theme = Themes.findOne({
-                name: themeName
-            });
-            var sidebarBackground = theme.sidebarBackground;
-            var textColor = theme.textColor;
-            var menuHover = theme.menuHover;
-            var menuActive = theme.menuActive;
-            var textColorActive = theme.textColorActive;
-            var statusActive = theme.statusActive;
-            // changement du CSS pour fit avec le theme
-            $('.navbar-brand').css({
-                "background": sidebarBackground
-                , "color": textColor
-            });
-            $('.sidebar').css("background", sidebarBackground);
-            $('.sidebar h5').css("color", textColor);
-            $('.sidebar ul li a').css("color", textColor);
-            $('.sidebar p').css("color", textColor);
-            $('.statusActive').css("background-color", statusActive);
-            $('head').append('<style>.sidebar .active a {background :' + menuActive + '; .sidebar a:hover {background :' + menuHover + '}</style>')
-        }
-        // event lors du upload de l'avatar
-        
+        // event lors du changement de theme
+        var themeName = event.target.id;
+        let theme = Themes.findOne({
+            name: themeName
+        });
+        var sidebarBackground = theme.sidebarBackground;
+        var textColor = theme.textColor;
+        var menuHover = theme.menuHover;
+        var menuActive = theme.menuActive;
+        var textColorActive = theme.textColorActive;
+        var statusActive = theme.statusActive;
+        // changement du CSS pour fit avec le theme
+        $('.navbar-brand').css({
+            "background": sidebarBackground
+            , "color": textColor
+        });
+        $('.sidebar').css("background", sidebarBackground);
+        $('.sidebar h5').css("color", textColor);
+        $('.sidebar ul li a').css("color", textColor);
+        $('.sidebar p').css("color", textColor);
+        $('.statusActive').css("background-color", statusActive);
+        $('head').append('<style>.sidebar .active a {background :' + menuActive + '; .sidebar a:hover {background :' + menuHover + '}</style>')
+    }
     , 'change.myFileInput': function (event, template) {
+        // event lors du upload de l'avatar
         event.preventDefault();
         FS.Utility.eachFile(event, function (file) {
             Images.insert(file, function (err, fileObj) {
