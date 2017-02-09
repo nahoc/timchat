@@ -14,8 +14,9 @@
         <div class="message-input">
             <!--<div id="outputText">OUTPUT
             </div>-->
-            <input id="message-box" name="message" placeholder="{{inputPlaceholder}}">
+            <textarea id="message-box" name="message" placeholder="{{inputPlaceholder}}"></textarea>
         </div>
+        <script type="text/javascript" src="/js/autocomplete.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#message-box").on('keyup change input', function (e) {

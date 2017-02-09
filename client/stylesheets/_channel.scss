@@ -288,15 +288,18 @@ body.is-channel .container {
         right: 0;
         padding: 15px 20px;
     }
-    .message-input input {
+    .message-input textarea {
         display: block;
         width: 100%;
         border: 2px solid #eee;
         border-radius: 6px;
         height: 40px;
-        padding: 5px 10px;
+        padding: 10px;
+        resize: none;
+        overflow: hidden;
+        padding-top: 9px;
     }
-    .message-input input:focus {
+    .message-input textarea:focus {
         outline: 0;
         border-color: #ddd;
     }

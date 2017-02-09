@@ -21,9 +21,9 @@ kadira:flow-router
 kadira:blaze-layout
 reactive-var                                # Reactive variable for tracker
 reactive-dict
-jquery                                      # Helpful client-side library
+                                     # Helpful client-side library
 tracker                                     # Meteor's client-side reactive programming library
-twbs:bootstrap                              # Twitter bootstrap
+                         # Twitter bootstrap
 meteorhacks:fast-render
 es5-shim                                    # ECMAScript 5 compatibility for older browsers.
 themeteorchef:bert                          # Package for notifications
@@ -45,3 +45,4 @@ cfs:filesystem
 natestrauser:x-editable-bootstrap           # Pour éditer champs bootstrap
 ostrio:meteor-root                          # Get current path on your server, where is Meteor application is running
 emojione:emojione                           # Adds emojis
+twbs:bootstrap     
