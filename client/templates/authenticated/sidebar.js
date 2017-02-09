@@ -82,40 +82,39 @@ Template.sidebar.events({
                     // erreur lors de l'upload de l'avatar
                     console.log("Upload error.");
                     // notification
-                    Bert.alert("Problème lors de la mise à jour de l'avatar.", 'success');
+                    Bert.alert("Problème lors de la mise à jour de l'avatar.", 'danger');
                 }
                 else {
                     Tracker.autorun(function () {
-                        // tout s'est bien passé
-                        var userId = Meteor.userId();
-                        var imagesURL = {
-                            "avatar": fileObj._id
-                        };
-                        Meteor.users.update(userId, {
-                            $set: imagesURL
-                        });
-                        // si social user
-                        let user = Meteor.users.findOne(userId, {
-                            fields: {
-                                'avatar': 1
-                                , 'profile': 1
-                            }
-                        });
-                        if (user.profile) {
-                            Meteor.users.update(userId, {
-                                $set: {
-                                    "profile": "null"
-                                }
-                            });
-                        }
                         // notification
                         Bert.alert("Avatar mis à jour avec succès!", 'success');
-                        
                         // re-render du template
                         setTimeout(function () {
                             console.log("TIMEOUT OVER");
-                            Blaze.render(Template.channel, $('body').get(0));
-                        }, 1500);
+                            // tout s'est bien passé
+                            var userId = Meteor.userId();
+                            var imagesURL = {
+                                "avatar": fileObj._id
+                            };
+                            Meteor.users.update(userId, {
+                                $set: imagesURL
+                            });
+                            // si social user
+                            let user = Meteor.users.findOne(userId, {
+                                fields: {
+                                    'avatar': 1
+                                    , 'profile': 1
+                                }
+                            });
+                            if (user.profile) {
+                                Meteor.users.update(userId, {
+                                    $set: {
+                                        "profile": "null"
+                                    }
+                                });
+                            }
+                            //Blaze.render(Template.channel, $('body').get(0));
+                        }, 3500);
                     });
                 }
             });
