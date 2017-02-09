@@ -2,28 +2,24 @@
 import handleChannelSwitch from '../../modules/handle-channel-switch';
 import handleMessageInsert from '../../modules/handle-message-insert';
 import sortMessages from '../../modules/sort-messages';
-
 // après la création du template des channels...
 Template.channel.onCreated(() => {
     let template = Template.instance();
     // appel de la fonction handleChannelSwitch
     handleChannelSwitch(template);
-});
 
+});
 // helpers
 Template.channel.helpers({
     // si on est en loading
     isLoading() {
             return Template.instance().loading.get();
-        },
-        // si c'est un message direct
+        }, // si c'est un message direct
         isDirect() {
             return Template.instance().isDirect.get();
-        },
-        username() {
+        }, username() {
             return FlowRouter.getParam('channel');
-        },
-        messages() {
+        }, messages() {
             let messages = Messages.find({}, {
                 sort: {
                     timestamp: 1
@@ -32,8 +28,7 @@ Template.channel.helpers({
             if (messages) {
                 return sortMessages(messages);
             }
-        },
-        // fonction pour changer le contenu du placeholder du input principal
+        }, // fonction pour changer le contenu du placeholder du input principal
         inputPlaceholder() {
             let current = FlowRouter.getParam('channel');
             if (current) {
@@ -41,7 +36,8 @@ Template.channel.helpers({
                     // on ajoute un "@" devant le nom de la personne
                     // dans le input
                     return "Écrire à " + current;
-                } else if (current[0] != "@") {
+                }
+                else if (current[0] != "@") {
                     // on ajout un "#" devant le nom du channel
                     // dans le input
                     return "Écrire sur #" + current;
@@ -49,10 +45,9 @@ Template.channel.helpers({
             }
         }
 });
-
 // events
 Template.channel.events({
-    'keyup [name="message"]' (event, template) {
+    'keydown [name="message"]' (event, template) {
         handleMessageInsert(event, template);
     }
 });

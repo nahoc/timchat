@@ -40,8 +40,13 @@ Accounts.onCreateUser(function (options, user) {
     }
     
     else {
-        user.avatar = "RRin2osxTNzZfKgRd";
+        // avatar par défaut si on se connecte par email
+        user.profile = "email";
+        user.avatar = "https://www.biography.com/.image/c_fit,cs_srgb,dpr_1.0,q_80,w_620/MTI2NDQwNDA2NTg5MTUwNDgy/ariana-grande-shutterstock_213445195-600x487jpg.jpg";
     }
+    
+    // thème par défaut
+    user.theme = "ember";
 
     // on retourne les informations du nouvel utilisateur 
     // en fonction de son mode de connexion

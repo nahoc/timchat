@@ -1,4 +1,4 @@
-let appName       = 'Application Name',
+let appName       = '#timCHAT',
     appEmail      = `${ appName } <support@application.com>`,
     emailTemplates = Accounts.emailTemplates;
 
@@ -7,7 +7,7 @@ emailTemplates.from     = appEmail;
 
 emailTemplates.resetPassword = {
   subject() {
-    return `[${ appName }] Reset Your Password`;
+    return `[${ appName }] Réinitialiser votre mot de passe`;
   },
   text( user, url ) {
     let emailAddress   = user.emails[ 0 ].address,

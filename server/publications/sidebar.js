@@ -12,6 +12,7 @@ Meteor.publish('sidebar', function () {
                 , profile: 1
                 , status: 1
                 , avatar: 1
+                , theme: 1
             }
         })
     ];
@@ -21,4 +22,11 @@ Meteor.publish('sidebar', function () {
  */
 Meteor.publish('images', function () {
     return Images.find();
+});
+
+/*
+ ** Publications des thèmes
+ */
+Meteor.publish('themes', function () {
+    return Themes.find();
 });

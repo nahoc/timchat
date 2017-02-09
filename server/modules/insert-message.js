@@ -37,13 +37,14 @@ let _getUserAvatar = (id) => {
     let user = Meteor.users.findOne({
         _id: id
     });
-    if (user) {
+    /*if (user) {
         if (user.profile) {
             return user.profile.avatar;
         } else {
             return user.avatar;
         }
-    }
+    }*/
+    return user.avatar;
 };
 
 let _assignDestination = (message) => {

@@ -11,7 +11,12 @@ let _getMessage = (template) => {
 };
 
 let _checkIfCanInsert = (message, event) => {
-    return message !== '' && event.keyCode === 13;
+    if($('.dropdown-menu').css('display') == 'block') {
+        console.log("nonono");
+    } else {
+        console.log('oui oui');
+    }
+    return message !== '' && event.keyCode === 13 && $('.dropdown-menu').css('display','none');
 };
 
 let _buildMessage = (template) => {

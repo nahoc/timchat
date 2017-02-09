@@ -5,6 +5,7 @@ Template.sidebar.onCreated(function () {
     this.autorun(() => {
         this.subscribe('images');
         this.subscribe('sidebar');
+        this.subscribe('themes');
     });
 });
 // helpers
@@ -118,40 +119,6 @@ Template.sidebar.events({
                                 }
                             }
                         });
-                        /*
-                                                Images.on('uploaded', function (fileObj) {
-                                                    console.log("uploaded");
-                                                    // tout s'est bien passé
-                                                    var userId = Meteor.userId();
-                                                    var imagesURL = {
-                                                        "avatar": fileObj._id
-                                                    };
-                                                    Meteor.users.update(userId, {
-                                                        $set: imagesURL
-                                                    });
-                                                    // si social user
-                                                    let user = Meteor.users.findOne(userId, {
-                                                        fields: {
-                                                            'avatar': 1
-                                                            , 'profile': 1
-                                                        }
-                                                    });
-                                                    if (user.profile) {
-                                                        Meteor.users.update(userId, {
-                                                            $set: {
-                                                                "profile": "null"
-                                                            }
-                                                        });
-                                                    }
-                                                    Bert.alert("Avatar mis à jour avec succès!", 'success');
-                                                });*/
-                        // notification
-                        // re-render du template
-                        /*setTimeout(function () {
-                            console.log("TIMEOUT OVER");
-
-                            //Blaze.render(Template.channel, $('body').get(0));
-                        }, 3500);*/
                     });
                 }
             });

@@ -28,18 +28,24 @@
     cursor: pointer!important;
 }
 
+.dropdown-menu .textcomplete-item {
+    &:last-child {
+        padding-bottom: 8px;
+    }
+}
+
 .dropdown-menu li:before {
     display: none;
 }
 
 .dropdown-menu .textcomplete-footer {
-    visibility: hidden;
     font-size: 0px;
     border-top: 1px solid #333;
     margin-top: .3em;
     height: 12px;
-    background: #e6e6e6;
+    background: #fff;
     border: none!important;
+    visibility: hidden;
 }
 
 .dropdown-menu .textcomplete-footer a {

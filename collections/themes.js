@@ -1,25 +1,25 @@
 // Création de la collection
-Channels = new Mongo.Collection( 'channels' );
+Themes = new Mongo.Collection( 'themes' );
 
 // allow rules
-Channels.allow({
+Themes.allow({
   insert: () => false,
   update: () => false,
   remove: () => false
 });
 
 // deny rules
-Channels.deny({
+Themes.deny({
   insert: () => true,
   update: () => true,
   remove: () => true
 });
 
 // Schéma
-let ChannelsSchema = new SimpleSchema({
+let ThemeSchema = new SimpleSchema({
   'name': {
     type: String,
-    label: 'The name of the channel.'
+    label: 'Le nom du theme.'
   }
 });
-Channels.attachSchema( ChannelsSchema );
+Themes.attachSchema( ThemeSchema );
