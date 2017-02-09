@@ -86,35 +86,72 @@ Template.sidebar.events({
                 }
                 else {
                     Tracker.autorun(function () {
-                        // notification
-                        Bert.alert("Avatar mis à jour avec succès!", 'success');
-                        // re-render du template
-                        setTimeout(function () {
-                            console.log("TIMEOUT OVER");
-                            // tout s'est bien passé
-                            var userId = Meteor.userId();
-                            var imagesURL = {
-                                "avatar": fileObj._id
-                            };
-                            Meteor.users.update(userId, {
-                                $set: imagesURL
-                            });
-                            // si social user
-                            let user = Meteor.users.findOne(userId, {
-                                fields: {
-                                    'avatar': 1
-                                    , 'profile': 1
-                                }
-                            });
-                            if (user.profile) {
-                                Meteor.users.update(userId, {
-                                    $set: {
-                                        "profile": "null"
+                        var cursor = Images.find(fileObj._id);
+                        var liveQuery = cursor.observe({
+                            changed: function (newImage, oldImage) {
+                                if (newImage.isUploaded()) {
+                                    liveQuery.stop();
+                                    console.log("uploaded");
+                                    // tout s'est bien passé
+                                    var userId = Meteor.userId();
+                                    var imagesURL = {
+                                        "avatar": fileObj._id
+                                    };
+                                    Meteor.users.update(userId, {
+                                        $set: imagesURL
+                                    });
+                                    // si social user
+                                    let user = Meteor.users.findOne(userId, {
+                                        fields: {
+                                            'avatar': 1
+                                            , 'profile': 1
+                                        }
+                                    });
+                                    if (user.profile) {
+                                        Meteor.users.update(userId, {
+                                            $set: {
+                                                "profile": "null"
+                                            }
+                                        });
                                     }
-                                });
+                                    Bert.alert("Avatar mis à jour avec succès!", 'success');
+                                }
                             }
+                        });
+                        /*
+                                                Images.on('uploaded', function (fileObj) {
+                                                    console.log("uploaded");
+                                                    // tout s'est bien passé
+                                                    var userId = Meteor.userId();
+                                                    var imagesURL = {
+                                                        "avatar": fileObj._id
+                                                    };
+                                                    Meteor.users.update(userId, {
+                                                        $set: imagesURL
+                                                    });
+                                                    // si social user
+                                                    let user = Meteor.users.findOne(userId, {
+                                                        fields: {
+                                                            'avatar': 1
+                                                            , 'profile': 1
+                                                        }
+                                                    });
+                                                    if (user.profile) {
+                                                        Meteor.users.update(userId, {
+                                                            $set: {
+                                                                "profile": "null"
+                                                            }
+                                                        });
+                                                    }
+                                                    Bert.alert("Avatar mis à jour avec succès!", 'success');
+                                                });*/
+                        // notification
+                        // re-render du template
+                        /*setTimeout(function () {
+                            console.log("TIMEOUT OVER");
+
                             //Blaze.render(Template.channel, $('body').get(0));
-                        }, 3500);
+                        }, 3500);*/
                     });
                 }
             });
