@@ -35,7 +35,6 @@ risul:moment-timezone
 standard-minifier-css                       # CSS minifier run for production mode
 standard-minifier-js                        # JS minifier run for production mode
 mizzao:user-status                          # Package pour savoir si un user est en ligne
-sunkay:easy-side-menu                       # Package pour menu sur le côté
 copleykj:autolinker                         # Package pour autolink des liens
 cfs:standard-packages                       # Package for file upload
 cfs:gridfs                                  # Package for file upload
@@ -44,3 +43,4 @@ natestrauser:x-editable-bootstrap           # Pour éditer champs bootstrap
 ostrio:meteor-root                          # Get current path on your server, where is Meteor application is running
 emojione:emojione                           # Adds emojis
 twbs:bootstrap                              # Twitter bootstrap
+sunkay:easy-side-menu
