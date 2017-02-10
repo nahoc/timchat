@@ -11,12 +11,7 @@ let _getMessage = (template) => {
 };
 
 let _checkIfCanInsert = (message, event) => {
-    if($('.dropdown-menu').css('display') == 'block') {
-        console.log("nonono");
-    } else {
-        console.log('oui oui');
-    }
-    return message !== '' && event.keyCode === 13 && $('.dropdown-menu').css('display','none');
+    return message !== '' && event.keyCode === 13;
 };
 
 let _buildMessage = (template) => {
@@ -33,6 +28,7 @@ let _handleInsert = (message, event, template) => {
             Bert.alert(error.reason, 'danger');
         } else {
             event.target.value = '';
+            /// AJOUTER SON
             console.log("new mess");
         }
     });

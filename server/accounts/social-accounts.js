@@ -37,14 +37,13 @@ Accounts.onCreateUser(function (options, user) {
             user.username = user.services.google.given_name.replace(/[^A-Za-z0-9\s]/g, '').toLowerCase().trim();;
             user.avatar = user.services.google.picture;
         }
-    }
-    
-    else {
+    } else {
         // avatar par défaut si on se connecte par email
+        var random = Math.floor(Math.random() * 3) + 1;
         user.profile = "email";
-        user.avatar = "https://www.biography.com/.image/c_fit,cs_srgb,dpr_1.0,q_80,w_620/MTI2NDQwNDA2NTg5MTUwNDgy/ariana-grande-shutterstock_213445195-600x487jpg.jpg";
+        user.avatar = "/default-avatar-" + random + ".svg";
     }
-    
+
     // thème par défaut
     user.theme = "ember";
 
