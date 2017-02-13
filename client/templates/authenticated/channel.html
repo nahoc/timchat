@@ -7,19 +7,13 @@
                 <p class="alert alert-warning">C'est tranquille ici...</p> {{/if}} {{/each}} </div>
         </div>
         <div class="message-input">
-            <textarea id="message-box" name="message" placeholder="{{inputPlaceholder}}"></textarea>
+            <input id="message-box" name="message" placeholder="{{inputPlaceholder}}" />
         </div>
-        <!-- autocomplete the emoji -->
-        <script type="text/javascript" src="/js/autocomplete.js"></script>
-        <script>
-            $(document).ready(function () {
-                $("#message-box").keypress(function (event) {
-                    if (event.which == '13') {
-                        return false;
-                    }
-                });
+        <script type="text/javascript">
+            $('#message-box').jemoji({
+                folder: '/emojis/'
             });
-        </script> 
-        {{> slideMenu}} 
+        </script>
+        {{> slideMenu}}
     </div>
 </template>
