@@ -19,4 +19,11 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Transfert de fichiers (TODO)
 * Supporte certaines balises HTML comme *H1*, *img* ou *pre*.
 
+##TODO:
+* Enregistrer le thème de l'utilisateur
+* Peaufiné menu
+* Ajouté les sons (dans la BD aussi)
+* Fixé certaines couleurs de thèmes
+* File upload
+
 par Cohan Carpentier
