@@ -6,13 +6,7 @@ let _handleSignup = () => {
     let user = {
         username: template.find('[name="username"]').value,
         email: template.find('[name="emailAddress"]').value,
-        password: template.find('[name="password"]').value,
-        /*profile: {
-            name: {
-                first: template.find('[name="firstName"]').value,
-                last: template.find('[name="lastName"]').value
-            }
-        }*/
+        password: template.find('[name="password"]').value
     };
 
     // affichage d'un message de bienvenue

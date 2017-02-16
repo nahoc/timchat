@@ -96,6 +96,24 @@ body.is-channel .container {
         textarea {
             resize: none;
         }
+        .popover {
+            z-index: 1000;
+            box-shadow: none;
+            top: -36px!important;
+            .btn-primary {
+                background: #e77562;
+                border: 1px solid #e77562;
+                &:hover {
+                    background: #e77562;
+                    border: 1px solid #e77562;
+                }
+            }
+            .btn {
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
         .popover-content {
             padding: 4px;
         }
@@ -281,6 +299,7 @@ body.is-channel .container {
     width: calc( 100% - 220px);
     background: #fff;
     border-top: 1px solid #eee;
+    z-index: -1;
     .message-input {
         background: #fff;
         position: absolute;
