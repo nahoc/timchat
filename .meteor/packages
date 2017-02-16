@@ -43,3 +43,4 @@ natestrauser:x-editable-bootstrap           # Pour éditer champs bootstrap
 ostrio:meteor-root                          # Get current path on your server, where is Meteor application is running
 emojione:emojione                           # Adds emojis
 twbs:bootstrap                              # Twitter bootstrap
+brentjanderson:buzz                         # Package pour gérer les sons html5
