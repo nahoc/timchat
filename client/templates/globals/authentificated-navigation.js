@@ -11,6 +11,7 @@ Template.authenticatedNavigation.events({
             }
         });
     }, 'click .slideout-menu-toggle' (event, template) {
+        /*console.log('cliiiick');
         // fonction du slideout menu
         event.preventDefault();
         event.stopPropagation();
@@ -49,6 +50,6 @@ Template.authenticatedNavigation.events({
         // si on clique sur parametres
         if($(event.target).hasClass('parametres')) {
             console.log('param');
-        }
+        }*/
     }
 });
