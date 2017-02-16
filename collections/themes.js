@@ -38,5 +38,13 @@ let ThemeSchema = new SimpleSchema({
         type: String
         , label: "Couleur de fond du rond d'activité d'un user"
     }
+    , 'textColorActive': {
+        type: String
+        , label: "Couleur du texte d'un onglet actif"
+    }
+    , 'statusActiveWhenActive': {
+        type: String
+        , label: "Couleur du rond d'activité lorsque l'onglet est actif"
+    }
 });
 Themes.attachSchema(ThemeSchema);

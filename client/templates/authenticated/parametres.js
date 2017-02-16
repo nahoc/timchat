@@ -38,6 +38,7 @@ Template.parametres.events({
         var menuActive = theme.menuActive;
         var textColorActive = theme.textColorActive;
         var statusActive = theme.statusActive;
+        var statusActiveWhenActive = theme.statusActiveWhenActive;
         // changement du CSS pour fit avec le theme
         $('.navbar-brand').css({
             "background": sidebarBackground
@@ -48,6 +49,6 @@ Template.parametres.events({
         $('.sidebar ul li a').css("color", textColor);
         $('.sidebar p').css("color", textColor);
         $('.statusActive').css("background-color", statusActive);
-        $('head').append('<style>.sidebar .active a {background :' + menuActive + '; .sidebar a:hover {background :' + menuHover + '}</style>')
+        $('head').append('<style>.sidebar ul li.active a {background :' + menuActive + ';color:' + textColorActive + '!important;} .sidebar ul li.active a:hover{background:'+menuActive+'!important;}.sidebar ul li.active a span.statusActive{background:' + statusActiveWhenActive + '!important;}.sidebar a:hover {background :' + menuHover + '}</style>')
     }
 });

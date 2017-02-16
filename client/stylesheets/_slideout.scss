@@ -1,25 +1,10 @@
-.slideout-menu-2 {
-    .parametres {
-        ul {
-            li {
-                a {
-                    text-decoration: none;
-                }
-            }
-        }
-        .liste-themes {
-            margin: 0;
-            padding: 0;
-            border-top: none;
-            border-bottom: none;
-            display: none;
-        }
-    }
+.parametres {
     position: absolute;
     background: #fff!important;
     border-left: 1px solid #E8E8E8;
     top: 0px;
-    right: -251px;
+    //right: -251px;
+    right: 0px;
     bottom: 0;
     h3 {
         color: #333;
@@ -86,5 +71,19 @@
         padding-top: 20px;
         float: left;
         clear: both;
+    }
+    ul {
+        li {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    .liste-themes {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+        border-bottom: none;
+        display: none;
     }
 }

@@ -48,6 +48,7 @@ let _seedThemes = () => {
             , menuHover: '#EDE5E0'
             , menuActive: '#E77562'
             , statusActive: '#E77562'
+            , statusActiveWhenActive: '#FFFFFF'
             , textColorActive: '#FFFFFF'
         }, {
             name: 'aubergine'
@@ -56,6 +57,7 @@ let _seedThemes = () => {
             , menuHover: '#3E313C'
             , menuActive: '#38978D'
             , statusActive: '#38978D'
+            , statusActiveWhenActive: '#FFFFFF'
             , textColorActive: '#FFFFFF'
         }, {
             name: 'dark'
@@ -64,14 +66,16 @@ let _seedThemes = () => {
             , menuHover: '#44475A'
             , menuActive: '#6272A4'
             , statusActive: '#FFFFFF'
+            , statusActiveWhenActive: '#FFFFFF'
             , textColorActive: '#FFFFFF'
         }, {
             name: 'vue'
             , sidebarBackground: '#34495E'
             , textColor: '#FFFFFF'
-            , menuHover: '#42B983'
+            , menuHover: '#263545'
             , menuActive: '#42B983'
             , statusActive: '#FFD41D'
+            , statusActiveWhenActive: '#FFD41D'
             , textColorActive: '#FFFFFF'
         }]
     });
