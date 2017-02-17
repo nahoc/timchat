@@ -10,30 +10,29 @@ Template.authenticatedNavigation.events({
                 Bert.alert('Vous avez bien été deconnecté!', 'success');
             }
         });
-    }, 'click .slideout-menu-toggle' (event, template) {
-        /*console.log('cliiiick');
-        // fonction du slideout menu
+    }, 'click #parametres' (event, template) {
+        console.log("hey");
         event.preventDefault();
         event.stopPropagation();
         // hide the dropdown
         $('.dropdown').removeClass('open');
         // create menu variables
-        var slideoutMenu = $('.slideout-menu');
-        var slideoutMenuWidth = $('.slideout-menu').width();
+        var slideoutMenu = $('.parametres');
+        var slideoutMenuWidth = $('.parametres').width();
         // toggle open class
         slideoutMenu.toggleClass("open");
         // slide menu Open
         if (slideoutMenu.hasClass("open")) {
             slideoutMenu.animate({
-                right: "250px"
+                right: "0px"
             });
             // create a one-time event to close when a user clicks anywhere outside
-            $(document).one('touchstart click', function () {
+            /*$(document).one('touchstart click', function () {
                 slideoutMenu.toggleClass("open");
                 slideoutMenu.animate({
                     right: -slideoutMenuWidth
                 }, 250);
-            });
+            });*/
         }
         else {
             // slide menu close
@@ -41,15 +40,5 @@ Template.authenticatedNavigation.events({
                 right: -slideoutMenuWidth
             }, 250);
         }
-        
-        // si on clique sur a propos
-        if($(event.target).hasClass('a-propos')) {
-            console.log('a propos');
-        }
-        
-        // si on clique sur parametres
-        if($(event.target).hasClass('parametres')) {
-            console.log('param');
-        }*/
     }
 });

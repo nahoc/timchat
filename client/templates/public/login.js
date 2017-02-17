@@ -9,11 +9,11 @@ Template.login.onRendered(() => {
     });
 
     // reset certaines css de la navigation
-    $('.barre-nav').css("max-width", "800px");
+    /*$('.barre-nav').css("max-width", "800px");
     $('.navbar-brand').css({
         "padding-left": "0px",
         "background-color": "#fff"
-    });
+    });*/
 });
 
 // events
