@@ -1,5 +1,5 @@
 .recover {
-    background: #fff;
+    background: $blanc;
     padding: 40px;
     padding-top: 55px;
     padding-bottom: 55px;
@@ -18,7 +18,7 @@
 }
 
 .creation {
-    background: #fff;
+    background: $blanc;
     padding: 40px;
     padding-top: 55px;
     padding-bottom: 55px;
@@ -37,7 +37,7 @@
 }
 
 .connexion {
-    background: #fff;
+    background: $blanc;
     padding: 40px;
     padding-top: 55px;
     padding-bottom: 55px;
@@ -80,22 +80,22 @@ ul {
 
 #facebook-login {
     background: #3b5998;
-    color: #ffffff;
+    color: $blanc;
     margin-top: 25px;
 }
 
 #twitter-login {
     background: #1DA1F3;
-    color: #ffffff;
+    color: $blanc;
 }
 
 #google-login {
     background: #d34836;
-    color: #ffffff;
+    color: $blanc;
 }
 
 #github-login {
-    background: #fff;
+    background: $blanc;
     border: 1px solid #ccc;
     margin-bottom: 0;
 }

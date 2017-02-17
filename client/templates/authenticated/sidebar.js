@@ -76,8 +76,11 @@ Template.sidebar.helpers({
 Template.sidebar.events({
     'click #ajout-channel': function (event, template) {
         console.log("click");
-    },
-    'change.myFileInput': function (event, template) {
+        $('.ajout-channel').animate({
+            'top': 0
+        });
+    }
+    , 'change.myFileInput': function (event, template) {
         // event lors du upload de l'avatar
         event.preventDefault();
         FS.Utility.eachFile(event, function (file) {

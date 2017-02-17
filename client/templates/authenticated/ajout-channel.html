@@ -1,10 +1,13 @@
 <template name="ajoutChannel">
     <div class="ajout-channel">
+        <button id="cancel-channel-add">X</button>
         <form>
             <h1>Ajouter un channel</h1>
-            <label>Nom du channel</label>
-            <input id="channel-name" placeholder="Nom du nouveau channel"/>
-            <button id="btn-channel-insert">Ajouter</button>
+            <label for="channel-name">Nom du channel</label>
+            <br/>
+            <input id="channel-name" placeholder="Nom du nouveau channel" />
+            <br/>
+            <button id="btn-channel-insert" class="btn">Ajouter</button>
         </form>
     </div>
 </template>

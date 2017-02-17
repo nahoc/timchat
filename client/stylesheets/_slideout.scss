@@ -1,6 +1,6 @@
 .parametres {
     position: absolute;
-    background: #fff!important;
+    background: $blanc;
     border-left: 1px solid #E8E8E8;
     top: 0px;
     //right: -251px;
@@ -46,11 +46,11 @@
                 font-size: 16px;
                 line-height: 24px;
                 font-weight: 400;
-                color: #717171;
+                color: $grispale;
                 padding-left: 20px;
                 &:hover {
                     background: rgb(252, 252, 252);
-                    color: #717171;
+                    color: $grispale;
                 }
             }
         }

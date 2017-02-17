@@ -1,0 +1,102 @@
+.user-menu {
+    position: absolute;
+    bottom: 20px;
+    textarea {
+        resize: none;
+    }
+    img {
+        float: left;
+        width: 48px;
+        height: 48px;
+        border-radius: 4px;
+    }
+    .user-menu-infos {
+        margin-left: 8px;
+        float: left;
+    }
+    .editable-click {
+        &:hover {
+            border-bottom: dashed 1px #ccc;
+        }
+        border-bottom: none;
+    }
+    h5 {
+        color: $grispale;
+        text-transform: none;
+        float: left;
+        clear: none;
+        padding-top: 10px;
+        font-size: 14px;
+        span {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    p {
+        float: left;
+        margin: 0;
+        padding: 0;
+        margin-top: 2px;
+        font-size: 13px;
+        color: $grispale;
+        position: relative;
+        padding-left: 14px;
+    }
+    .statusConnection {
+        opacity: 0.6;
+    }
+    .statusActive {
+        float: left;
+        width: 9px;
+        height: 9px;
+        border-radius: 9px;
+        background: rgb(231, 117, 98);
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        margin-right: 8px;
+    }
+}
+
+.popover {
+    z-index: 1000;
+    box-shadow: none;
+    top: -36px!important;
+    .btn-primary {
+        background: $saumon;
+        border: 1px solid $saumon;
+        &:hover {
+            background: $saumon;
+            border: 1px solid $saumon;
+        }
+    }
+}
+
+.popover-content {
+    padding: 4px;
+}
+
+.form-control {
+    padding: 4px;
+    width: 130px;
+    overflow: hidden;
+}
+
+.editable-buttons {
+    margin-left: 4px;
+}
+
+.editable-submit {
+    .glyphicon {
+        top: 2px;
+    }
+}
+
+.editable-cancel {
+    margin-left: 4px;
+    .glyphicon {
+        top: 3px;
+    }
+}

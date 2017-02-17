@@ -15,7 +15,7 @@
     margin-top: 20px;
     padding: 5px 5px 0;
     border: 1px solid rgba(143, 193, 228, .6);
-    background-color: #fff;
+    background-color: $blanc;
     bottom: 80px;
 }
 
@@ -71,7 +71,7 @@
 .jemoji-icons>div:active,
 .jemoji-icons>div:focus,
 .jemoji-icons>div:hover {
-    color: #fff;
+    color: $blanc;
     background-color: #439fe0
 }
 
@@ -90,15 +90,15 @@
 }
 
 .jemoji-menu.blue .jemoji-info {
-    color: #fff;
-    background-color: #e77562
+    color: $blanc;
+    background-color: $saumon
 }
 
 .jemoji-menu.blue .jemoji-icons>div.active,
 .jemoji-menu.blue .jemoji-icons>div:active,
 .jemoji-menu.blue .jemoji-icons>div:focus,
 .jemoji-menu.blue .jemoji-icons>div:hover {
-    background-color: #e77562
+    background-color: $saumon
 }
 
 .jemoji-menu.blue .jemoji-menu-arrow.up {
@@ -110,7 +110,7 @@
 }
 
 .jemoji-menu.green .jemoji-info {
-    color: #fff;
+    color: $blanc;
     border-color: #63b546;
     background-color: #63b546
 }

@@ -1,0 +1,146 @@
+* {
+    font-family: 'Lato', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: #FAF4F1;
+}
+
+::-webkit-scrollbar {
+    background: #f3f3f3;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d9d9de;
+}
+
+body.is-channel .container {
+    width: 100%;
+}
+
+.logo {
+    height: 22px;
+    float: left;
+    margin-right: 4px;
+}
+
+.image-link {
+    display: block;
+    margin-bottom: 10px!important;
+    .image-chat {
+        max-height: 280px;
+        max-width: 100%;
+        pointer-events: none;
+    }
+}
+
+.sidebar,
+.conversation {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    height: 100%;
+}
+
+
+
+.conversation {
+    left: 220px;
+    width: calc( 100% - 220px);
+    background: #fff;
+    border-top: 1px solid #eee;
+    z-index: -1;
+    .message-input {
+        background: #fff;
+        position: absolute;
+        bottom: 52px;
+        left: 0;
+        right: 0;
+        padding: 15px 20px;
+    }
+    .message-input input {
+        display: block;
+        width: 100%;
+        border: 2px solid #eee;
+        border-radius: 6px;
+        height: 40px;
+        padding: 10px;
+        overflow: hidden;
+        padding-top: 9px;
+    }
+    .message-input input:focus {
+        outline: 0;
+        border-color: #ddd;
+    }
+    #messages {
+        display: flex;
+        float: left;
+        overflow: auto;
+        width: 100%;
+        height: calc(100% - 122px);
+        background: #fff;
+        padding: 20px 20px 0;
+        overflow-x: hidden;
+    }
+    .messages-list {
+        width: 100%;
+        max-height: 100%;
+        align-self: flex-end;
+        opacity: 1;
+        &.loading-list {
+            opacity: 0;
+        }
+    }
+    .message {
+        position: relative;
+        padding-left: 46px;
+    }
+    .message .avatar {
+        float: left;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        border-radius: 3.2px;
+    }
+    .message header h4 {
+        font-size: 15px;
+        color: rgb(44, 45, 48);
+        font-weight: 900;
+        line-height: 22px;
+        margin-bottom: 0;
+        padding-top: 2px;
+    }
+    .message header h4 span {
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 12px;
+        font-weight: normal;
+        color: rgb(158, 158, 166);
+        line-height: 18px;
+    }
+    .message > *:first-child,
+    .message > header > *:first-child {
+        margin-top: 0px;
+    }
+    .message .body {
+        a {
+            color: #08c;
+            &:hover,
+            &:visited {
+                color: #005e99;
+            }
+        }
+        line-height: 22px;
+        font-size: 15px;
+        color: rgb(44, 45, 48);
+    }
+    .message > *:last-child,
+    .message > .body > *:last-child {
+        margin-bottom: 0px;
+    }
+}

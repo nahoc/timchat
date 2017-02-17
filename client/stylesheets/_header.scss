@@ -1,5 +1,6 @@
 .barre-nav {
-    max-width: 800px;
+    //max-width: 800px;
+    border-bottom: 1px solid #eee;
 }
 
 .navbar {
@@ -26,18 +27,16 @@
 
 .navbar.navbar-default {
     border-radius: 0px;
-    background: #fff;
-    .navbar-brand {
-        width: 220px;
-        background: #fff;
-    }
+    background: $blanc;
 }
 
 .navbar-brand {
     font-weight: 900;
-    color: #717171;
+    color: $grispale;
     font-size: 22px;
-    padding-left: 0px;
+    padding-left: 20px;
+    width: 220px;
+    background: $creme;
 }
 
 body.is-channel .navbar.navbar-default {
@@ -61,7 +60,7 @@ body.is-channel .navbar.navbar-default {
     height: 0;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-bottom: 7px solid #fff;
+    border-bottom: 7px solid $blanc;
     position: absolute;
     top: -7px;
     right: 17px;
@@ -76,21 +75,19 @@ body.is-channel .navbar.navbar-default {
 }
 
 .navbar-default .navbar-nav > li > a {
-    background: #fff!important;
+    background: $blanc;
 }
 
-.dropdown-toggle {
-    .menu-icon {
-        &:hover {
-            cursor: pointer;
-            fill: #fff;
-        }
-        width: 20px;
-        height: 20px;
-        padding: 2px;
-        display: block;
-        -ms-transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
+.menu-icon {
+    &:hover {
+        cursor: pointer;
+        fill: $blanc;
     }
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    display: block;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
