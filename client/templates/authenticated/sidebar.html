@@ -2,7 +2,7 @@
     <!-- template pour la sidebar -->
     <aside class="sidebar">
         <!-- channels -->
-        <h5>Salons <span class="suffix">({{channelsCount}})</span></h5>
+        <h5>Salons <span class="suffix">({{channelsCount}})</span><button id="ajout-channel">Ajouter</button></h5>
         <ul> {{#each channel in channels}}
             <li class="{{currentChannel channel.name}}">
                 <a href="/messages/{{channel.name}}"> <span class="prefix">#</span>{{channel.name}} </a>

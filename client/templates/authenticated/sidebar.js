@@ -74,6 +74,9 @@ Template.sidebar.helpers({
 });
 // events
 Template.sidebar.events({
+    'click #ajout-channel': function (event, template) {
+        console.log("click");
+    },
     'change.myFileInput': function (event, template) {
         // event lors du upload de l'avatar
         event.preventDefault();

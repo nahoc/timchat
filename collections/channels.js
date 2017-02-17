@@ -2,20 +2,20 @@
 Channels = new Mongo.Collection('channels');
 // allow rules
 Channels.allow({
-    insert: () => false
-    , update: () => false
-    , remove: () => false
-});
-// deny rules
-Channels.deny({
     insert: () => true
     , update: () => true
     , remove: () => true
+});
+// deny rules
+Channels.deny({
+    insert: () => false
+    , update: () => false
+    , remove: () => false
 });
 // Schéma
 let ChannelsSchema = new SimpleSchema({
     'name': {
         type: String
-        , label: 'The name of the channel.'
+        , label: 'Le nom du channel.'
     }
 });

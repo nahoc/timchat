@@ -3,7 +3,6 @@ let _insertMessage = (message) => {
 };
 
 let _escapeUnwantedMarkdown = (message) => {
-    // Escape h1-h6 tags and inline images ![]() in Markdown.
     return message
         .replace(/#/g, '&#35;')
         .replace(/(!\[.*?\]\()(.*?)(\))+/g, '&#33;&#91;&#93;&#40;&#41;');
@@ -37,13 +36,6 @@ let _getUserAvatar = (id) => {
     let user = Meteor.users.findOne({
         _id: id
     });
-    /*if (user) {
-        if (user.profile) {
-            return user.profile.avatar;
-        } else {
-            return user.avatar;
-        }
-    }*/
     return user.avatar;
 };
 
