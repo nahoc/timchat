@@ -8,6 +8,7 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Réinitialiser son mot de passe
 * Changer son nom d'utilisateur
 * Changer son avatar
+* Création de channels
 * Voir quels utilisateurs sont en ligne
 * Modifier le thème de l'application
 * Discutions privées
@@ -23,6 +24,6 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Ajouté les sons (dans la BD aussi)
 * Fixé certaines couleurs de thèmes
 * File upload
-* Création de channels
+* Favicon change lorsqu'on reçoit un nouveau message
 
 par Cohan Carpentier
