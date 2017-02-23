@@ -43,40 +43,12 @@ let _seedThemes = () => {
         environments: ['development', 'staging', 'production']
         , data: [{
             name: 'ember'
-            , sidebarBackground: '#FAF4F1'
-            , textColor: '#717171'
-            , menuHover: '#EDE5E0'
-            , menuActive: '#E77562'
-            , statusActive: '#E77562'
-            , statusActiveWhenActive: '#FFFFFF'
-            , textColorActive: '#FFFFFF'
         }, {
             name: 'aubergine'
-            , sidebarBackground: '#4D394B'
-            , textColor: '#FFFFFF'
-            , menuHover: '#3E313C'
-            , menuActive: '#38978D'
-            , statusActive: '#38978D'
-            , statusActiveWhenActive: '#FFFFFF'
-            , textColorActive: '#FFFFFF'
         }, {
             name: 'dark'
-            , sidebarBackground: '#282A36'
-            , textColor: '#FFFFFF'
-            , menuHover: '#44475A'
-            , menuActive: '#6272A4'
-            , statusActive: '#FFFFFF'
-            , statusActiveWhenActive: '#FFFFFF'
-            , textColorActive: '#FFFFFF'
         }, {
             name: 'vue'
-            , sidebarBackground: '#34495E'
-            , textColor: '#FFFFFF'
-            , menuHover: '#263545'
-            , menuActive: '#42B983'
-            , statusActive: '#FFD41D'
-            , statusActiveWhenActive: '#FFD41D'
-            , textColorActive: '#FFFFFF'
         }]
     });
 };

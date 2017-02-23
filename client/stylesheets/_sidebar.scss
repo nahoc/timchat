@@ -13,6 +13,18 @@
 }
 
 .sidebar {
+    h5 {
+        position: relative;
+    }
+    #ajout-channel {
+        position: absolute;
+        background: transparent;
+        border: none;
+        top: -2px;
+        right: 0;
+        font-size: 17px;
+        outline: none;
+    }
     left: 0;
     width: 220px;
     background: $creme;

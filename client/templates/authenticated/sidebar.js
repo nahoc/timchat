@@ -64,6 +64,8 @@ Template.sidebar.helpers({
             _id: Meteor.userId()
         });
         if (me) {
+            // on change le theme aussi
+            $('body').addClass(me.theme);
             return me.username + " (vous)";
         }
     }, fullName(name) {

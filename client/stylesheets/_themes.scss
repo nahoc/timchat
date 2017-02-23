@@ -1,0 +1,143 @@
+.dark {
+    .navbar-brand {
+        color: $blanc;
+        background: #282A36;
+    }
+    .sidebar {
+        h5 {
+            color: $blanc;
+        }
+        a {
+            color: $blanc;
+        }
+        background: #282A36;
+        ul .active a {
+            color: $blanc;
+            background: #6272A4;
+            &:hover {
+                background: #6272A4;
+            }
+        }
+        ul li a:hover {
+            background: #44475A;
+        }
+        .statusActive {
+            background: $blanc;
+        }
+        .statusConnection {
+            color: $blanc;
+        }
+        .popover .btn-primary {
+            background: #6272A4;
+            border: 1px solid #6272A4;
+        }
+    }
+}
+
+.ember {
+    .navbar-brand {
+        color: $grispale;
+        background: $creme;
+    }
+    .sidebar {
+        h5 {
+            color: $grispale;
+        }
+        a {
+            color: $grispale;
+        }
+        background: $creme;
+        ul .active a {
+            color: $blanc;
+            background: $saumon;
+            &:hover {
+                background: $saumon;
+            }
+        }
+        ul li a:hover {
+            background: #EDE5E0;
+        }
+        .statusActive {
+            background: $saumon;
+        }
+        .statusConnection {
+            color: $grispale;
+        }
+        .popover .btn-primary {
+            background: $saumon;
+            border: 1px solid $saumon;
+        }
+    }
+}
+
+.vue {
+    .navbar-brand {
+        color: $blanc;
+        background: #34495E;
+    }
+    .sidebar {
+        h5 {
+            color: $blanc;
+        }
+        a {
+            color: $blanc;
+        }
+        background: #34495E;
+        ul .active a {
+            color: $blanc;
+            background: #42B983;
+            &:hover {
+                background: #42B983;
+            }
+        }
+        ul li a:hover {
+            background: #263545;
+        }
+        .statusActive {
+            background: #FFD41D;
+        }
+        .statusConnection {
+            color: $blanc;
+        }
+        .popover .btn-primary {
+            background: #42B983;
+            border: 1px solid #42B983;
+        }
+    }
+}
+
+.aubergine {
+    .navbar-brand {
+        color: $blanc;
+        background: #4D394B;
+    }
+    .sidebar {
+        h5 {
+            color: $blanc;
+        }
+        a {
+            color: $blanc;
+        }
+        background: #4D394B;
+        ul .active a {
+            color: $blanc;
+            background: #38978D;
+            &:hover {
+                background: #38978D;
+            }
+        }
+        ul li a:hover {
+            background: #3E313C;
+        }
+        .statusActive {
+            background: $blanc;
+        }
+        .statusConnection {
+            color: $blanc;
+        }
+        .popover .btn-primary {
+            background: #42B983;
+            border: 1px solid #42B983;
+        }
+    }
+}
