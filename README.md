@@ -13,6 +13,7 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Modifier le thème de l'application
 * Supprimer ses messages
 * Discutions privées
+* Enregistrer le thème de l'utilisateur
 * Mise en forme automatique des hyperliens
 * *Hotlinking* d'images
 * Utilisation d'emojis
@@ -20,10 +21,8 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Supporte certaines balises HTML comme *H1*, *img* ou *pre*.
 
 ##TODO:
-* Enregistrer le thème de l'utilisateur
 * Peaufiné menu
 * Ajouté les sons (dans la BD aussi)
-* Fixé certaines couleurs de thèmes
 * File upload
 * Favicon change lorsqu'on reçoit un nouveau message
 
