@@ -9,6 +9,9 @@
         {{/if}}
 
         <div class="body">
+            <!-- bouton de suppression de message -->
+            {{{isOwner owner}}}
+            <!-- actual message -->
             {{#emojione}} {{#autolink}} {{{parseMarkdown message}}} {{{imageLink message}}} {{/autolink}} {{/emojione}}
         </div>
     </div>

@@ -1,39 +1,39 @@
 Messages = new Mongo.Collection('messages');
 
 Messages.allow({
-    insert: () => false,
-    update: () => false,
-    remove: () => false
-});
-
-Messages.deny({
     insert: () => true,
     update: () => true,
     remove: () => true
 });
 
+Messages.deny({
+    insert: () => false,
+    update: () => false,
+    remove: () => false
+});
+
 let MessagesSchema = new SimpleSchema({
     'channel': {
         type: String,
-        label: 'The ID of the channel this message belongs to.',
+        label: 'Le ID du channel dans lequel va le message.',
         optional: true
     },
     'to': {
         type: String,
-        label: 'The ID of the user this message was sent directly to.',
+        label: 'À qui le message est destiné.',
         optional: true
     },
     'owner': {
         type: String,
-        label: 'The ID of the user that created this message.'
+        label: 'Le ID de la personne qui a créé le message.'
     },
     'timestamp': {
         type: Date,
-        label: 'The date and time this message was created.'
+        label: 'La date de création du message.'
     },
     'message': {
         type: String,
-        label: 'The content of this message.'
+        label: 'Le contenu du message.'
     }
 });
 

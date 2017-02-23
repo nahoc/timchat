@@ -47,8 +47,6 @@ body.is-channel .container {
     height: 100%;
 }
 
-
-
 .conversation {
     left: 220px;
     width: calc( 100% - 220px);
@@ -99,6 +97,7 @@ body.is-channel .container {
     .message {
         position: relative;
         padding-left: 46px;
+        overflow: hidden;
     }
     .message .avatar {
         float: left;
@@ -142,5 +141,29 @@ body.is-channel .container {
     .message > *:last-child,
     .message > .body > *:last-child {
         margin-bottom: 0px;
+    }
+    .delete-message {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        background: $saumon;
+        outline: 0;
+        border: none;
+        border-radius: 4px;
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url(/delete.svg);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: none;
+    }
+    .message:hover {
+        background: #fcfcfc;
+        .delete-message {
+            display: block;
+        }
     }
 }
