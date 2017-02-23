@@ -11,6 +11,7 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Création de channels
 * Voir quels utilisateurs sont en ligne
 * Modifier le thème de l'application
+* Supprimer ses messages
 * Discutions privées
 * Mise en forme automatique des hyperliens
 * *Hotlinking* d'images
