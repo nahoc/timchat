@@ -112,6 +112,8 @@ oauth1@1.1.11
 oauth2@1.1.11
 observe-sequence@1.0.14
 ordered-dict@1.0.9
+ostrio:cookies@2.0.4
+ostrio:files@1.5.6
 ostrio:meteor-root@1.0.4
 promise@0.8.8
 raix:eventemitter@0.1.3

@@ -7,7 +7,7 @@
                 <p class="alert alert-warning">C'est tranquille ici...</p> {{/if}} {{/each}} </div>
         </div>
         <div class="message-input">
-            <input id="message-box" name="message" placeholder="{{inputPlaceholder}}" />
+            {{> uploadForm}}<input id="message-box" name="message" placeholder="{{inputPlaceholder}}" />
         </div>
         <script type="text/javascript">
             $('#message-box').jemoji({

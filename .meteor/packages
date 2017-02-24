@@ -44,3 +44,4 @@ ostrio:meteor-root                          # Get current path on your server, w
 emojione:emojione                           # Adds emojis
 twbs:bootstrap                              # Twitter bootstrap
 brentjanderson:buzz                         # Package pour gérer les sons html5
+ostrio:files
