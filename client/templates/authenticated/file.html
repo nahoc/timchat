@@ -1,7 +1,7 @@
 <template name='file'>
     <ul class="file-list"> {{#each fichier in file}}
         <li>
-            <a href="{{fichier.link}}?download=true" download="{{fichier.name}}" target="_parent"> <img src="/cdn/storage/files/{{fichier._id}}/original/{{fichier._id}}{{fichier.extension}}" alt="{{fichier.name}}" /> {{file.name}}</a>
+            <a href="/cdn/storage/files/{{fichier._id}}/original/{{fichier._id}}{{fichier.extension}}?download=true" download="{{fichier.name}}" target="_parent"> <img src="/cdn/storage/files/{{fichier._id}}/original/{{fichier._id}}{{fichier.extension}}" alt="{{fichier.name}}" /> {{file.name}}</a>
         </li> {{/each}}
         <!--<li>
             <a href="{{file.link}}?download=true" download="{{file.name}}" target="_parent"> <img src="{{file.link}}" alt="{{file.name}}" /> {{file.name}}</a>
