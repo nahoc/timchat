@@ -166,4 +166,11 @@ body.is-channel .container {
             display: block;
         }
     }
+    #message-box {
+        width: calc(100% - 38px);
+        position: relative;
+        left: 38px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
 }

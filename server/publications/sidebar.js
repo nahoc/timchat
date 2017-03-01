@@ -17,12 +17,12 @@ Meteor.publish('sidebar', function () {
         })
     ];
 });
-Meteor.publish('messages', function () {
+/*Meteor.publish('messages', function () {
     return [
         // retourne tous les channels existants
         Messages.find()
     ];
-});
+});*/
 /*
  ** Publications des images
  */

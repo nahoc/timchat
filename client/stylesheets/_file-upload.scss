@@ -1,0 +1,25 @@
+.file-upload {
+    position: absolute;
+    left: 0;
+    background: red;
+    left: 20px;
+    width: 38px;
+    opacity: 0;
+}
+
+.btn-upload {
+    pointer-events: none;
+    border: 2px solid #eee;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    position: absolute;
+    height: 40px;
+    cursor: pointer;
+    color: #ccc;
+    text-align: center;
+    width: 40px;
+    font-size: 24px;
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,5 +1,5 @@
 Files = new FilesCollection({
-    collectionName: 'Files'
+    collectionName: 'files'
     , storagePath: 'data'
     , allowClientCode: false, // Disallow remove files from Client
     onBeforeUpload: function (file) {
@@ -8,15 +8,7 @@ Files = new FilesCollection({
             return true;
         }
         else {
-            return 'Le fichier doit être moins de 10MB';
+            return 'Le fichier doit être moins de 10MB.';
         }
     }
 });
-if (Meteor.isClient) {
-    Meteor.subscribe('files');
-}
-if (Meteor.isServer) {
-    Meteor.publish('files', function () {
-        return Files.find().cursor;
-    });
-}

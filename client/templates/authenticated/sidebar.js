@@ -2,10 +2,14 @@
  ** JS de la sidebar; inclus les subscriptions
  */
 Template.sidebar.onCreated(function () {
-    this.autorun(() => {
+    /*this.autorun(() => {
         this.subscribe('images');
         this.subscribe('sidebar');
-    });
+    });*/
+    let template = Template.instance();
+    template.subscribe('images');
+    template.subscribe('sidebar');
+    template.subscribe('files');
 });
 // helpers
 Template.sidebar.helpers({

@@ -14,7 +14,3 @@ authenticatedRoutes.route('/messages/:channel', {
         });
     }
 });
-
-authenticatedRoutes.route('/a-propos', {
-    name: 'a-propos'
-});
