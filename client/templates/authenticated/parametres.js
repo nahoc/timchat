@@ -22,6 +22,7 @@ Template.parametres.events({
     'click #onglet-theme': function (event, template) {
         console.log("click");
         event.preventDefault();
+        event.stopPropagation();
         $(".liste-themes").slideToggle("slow", function () {
             // Animation complete.
         });

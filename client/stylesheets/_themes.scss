@@ -1,3 +1,33 @@
+.apercu-dark,
+.apercu-ember,
+.apercu-vue,
+.apercu-aubergine {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    position: relative;
+    top: 3px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.apercu-dark {
+    background: #6272A4;
+}
+
+.apercu-ember {
+    background: $saumon;
+}
+
+.apercu-vue {
+    background: #42B983;
+}
+
+.apercu-aubergine {
+    background: #4D394B;
+}
+
 .dark {
     .navbar-brand {
         color: $blanc;
@@ -140,4 +170,8 @@
             border: 1px solid #42B983;
         }
     }
+}
+
+.theme-changer {
+    background: #f7f7f7;
 }

@@ -26,12 +26,12 @@ Template.authenticatedNavigation.events({
                 right: "0px"
             });
             // create a one-time event to close when a user clicks anywhere outside
-            /*$(document).one('touchstart click', function () {
+            $('.cancel').one('touchstart click', function () {
                 slideoutMenu.toggleClass("open");
                 slideoutMenu.animate({
                     right: -slideoutMenuWidth
                 }, 250);
-            });*/
+            });
         }
         else {
             // slide menu close
@@ -54,13 +54,12 @@ Template.authenticatedNavigation.events({
             slideoutMenu.animate({
                 right: "0px"
             });
-            // create a one-time event to close when a user clicks anywhere outside
-            /*$(document).one('touchstart click', function () {
+            $('.cancel').one('touchstart click', function () {
                 slideoutMenu.toggleClass("open");
                 slideoutMenu.animate({
                     right: -slideoutMenuWidth
                 }, 250);
-            });*/
+            });
         }
         else {
             // slide menu close

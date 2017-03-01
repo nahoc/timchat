@@ -1,14 +1,13 @@
 <template name="parametres">
-    <div class="parametres">
+    <div class="parametres sidemenu">
         <!-- template pour les paramètres -->
-        <h3>Paramètres <img src="/cancel.svg" alt="Fermer" class="cancel slideout-menu-toggle"/></h3>
+        <h3>Paramètres <img id="cancel" src="/cancel.svg" alt="Fermer" class="cancel slideout-menu-toggle"/></h3>
         <ul>
-            <li><a href="#">Notifications</a></li>
-            <li><a id="onglet-theme" href="#">Thèmes</a>
+            <li><a href="#"><input id="checkbox-son" type="checkbox"/> <label for="checkbox-son">Activer les sons</label></a></li>
+            <li><a id="onglet-theme" href="#">Thèmes ▾</a>
                 <ul class="liste-themes">{{#each theme in themes}}
-                    <li><a id="{{theme.name}}" class="theme-changer" href="#">{{theme.name}}</a></li> {{/each}}</ul>
+                    <li><a id="{{theme.name}}" class="theme-changer" href="#"><span class="apercu-{{theme.name}}"></span> {{theme.name}}</a></li> {{/each}}</ul>
             </li>
-            <li><a href="#">Autres</a></li>
         </ul>
     </div>
 </template>
