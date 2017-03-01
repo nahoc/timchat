@@ -22,8 +22,8 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Supporte certaines balises HTML comme *H1*, *img* ou *pre*.
 
 ##TODO:
-* Peaufiné menu
 * Ajouté les sons
 * Favicon change lorsqu'on reçoit un nouveau message
+* HTML5 notifications
 
 par Cohan Carpentier
