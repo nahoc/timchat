@@ -16,14 +16,14 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Enregistrer le thème de l'utilisateur
 * Mise en forme automatique des hyperliens
 * *Hotlinking* d'images
+* File upload
 * Utilisation d'emojis
 * Choisir des emojis à partir d'un tableau
 * Supporte certaines balises HTML comme *H1*, *img* ou *pre*.
 
 ##TODO:
 * Peaufiné menu
-* Ajouté les sons (dans la BD aussi)
-* File upload
+* Ajouté les sons
 * Favicon change lorsqu'on reçoit un nouveau message
 
 par Cohan Carpentier
