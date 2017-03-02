@@ -56,7 +56,7 @@ Template.parametres.events({
             // If it's okay let's create a notification
             var options = {
                 icon: "/default.png",
-                body: "Les notifications sont maintenant activées!"
+                body: "Les notifications sont déjà activées!"
             }
 
             new Notification("#timCHAT", options);
@@ -65,15 +65,6 @@ Template.parametres.events({
         // Otherwise, we need to ask the user for permission
         else if (Notification.permission !== "denied") {
             Notification.requestPermission(function (permission) {
-                // If the user accepts, let's create a notification
-                /*if (permission === "granted") {
-                    var options = {
-                        icon: "/default.png",
-                        body: "message de l'usager"
-                    }
-
-                    new Notification("Nom de l'usager", options);
-                }*/
                 if (permission === "granted") {
                     var options = {
                         icon: "/default.svg",

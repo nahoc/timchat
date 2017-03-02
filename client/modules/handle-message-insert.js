@@ -3,7 +3,6 @@
  */
 // import
 import setScroll from './set-scroll';
-import playSound from './play-sound';
 let _getMessage = (template) => {
     let message = template.find('[name="message"]').value;
     return message.trim();
@@ -25,14 +24,6 @@ let _handleInsert = (message, event, template) => {
         }
         else {
             event.target.value = '';
-            // son qui est joué lors d'un message
-            var isactive = false;
-            $(window).focus(function () {
-                isactive = true;
-            }).blur(function () {
-                isactive = false;
-            });
-            playSound(isactive);
         }
     });
 };
