@@ -25,5 +25,7 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Ajouté les sons
 * Favicon change lorsqu'on reçoit un nouveau message
 * HTML5 notifications
+* Éditer un message
+* Delete message avec emojis (bug?)
 
 par Cohan Carpentier
