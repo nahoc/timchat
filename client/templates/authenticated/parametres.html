@@ -3,7 +3,7 @@
         <!-- template pour les paramètres -->
         <h3>Paramètres <img id="cancel" src="/cancel.svg" alt="Fermer" class="cancel slideout-menu-toggle"/></h3>
         <ul>
-            <li><a href="#"><input id="checkbox-son" type="checkbox"/> <label for="checkbox-son">Activer les sons</label></a></li>
+            <li><a id="notify" href="#">Activer les notifications</a></li>
             <li><a id="onglet-theme" href="#">Thèmes ▾</a>
                 <ul class="liste-themes">{{#each theme in themes}}
                     <li><a id="{{theme.name}}" class="theme-changer" href="#"><span class="apercu-{{theme.name}}"></span> {{theme.name}}</a></li> {{/each}}</ul>

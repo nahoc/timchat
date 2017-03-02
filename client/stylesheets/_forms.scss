@@ -4,3 +4,27 @@ form label.error {
     font-weight: normal;
     color: lighten( red, 20%);
 }
+
+.signup {
+    .form-control {
+        width: 100%!important;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+.login {
+    .form-control {
+        width: 100%!important;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+.recover {
+    .form-control {
+        width: 100%!important;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}

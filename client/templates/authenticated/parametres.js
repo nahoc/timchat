@@ -26,8 +26,8 @@ Template.parametres.events({
         $(".liste-themes").slideToggle("slow", function () {
             // Animation complete.
         });
-    }
-    , 'click .theme-changer': function (event, template) {
+    },
+    'click .theme-changer': function (event, template) {
         // event lors du changement de theme
         var themeName = event.target.id;
         var newTheme = {
@@ -44,5 +44,45 @@ Template.parametres.events({
         }, {
             $set: newTheme
         });
+    },
+    'click #notify': function (event, template) {
+        // Let's check if the browser supports notifications
+        if (!("Notification" in window)) {
+            alert("Ce navigateur ne support pas les notifications.");
+        }
+
+        // Let's check whether notification permissions have already been granted
+        else if (Notification.permission === "granted") {
+            // If it's okay let's create a notification
+            var options = {
+                icon: "/default.png",
+                body: "Les notifications sont maintenant activées!"
+            }
+
+            new Notification("#timCHAT", options);
+        }
+
+        // Otherwise, we need to ask the user for permission
+        else if (Notification.permission !== "denied") {
+            Notification.requestPermission(function (permission) {
+                // If the user accepts, let's create a notification
+                /*if (permission === "granted") {
+                    var options = {
+                        icon: "/default.png",
+                        body: "message de l'usager"
+                    }
+
+                    new Notification("Nom de l'usager", options);
+                }*/
+                if (permission === "granted") {
+                    var options = {
+                        icon: "/default.svg",
+                        body: "Les notifications sont maintenant activées!"
+                    }
+
+                    new Notification("#timCHAT", options);
+                }
+            });
+        }
     }
 });
