@@ -102,6 +102,7 @@
 
 .fichiers {
     overflow: auto;
+    overflow-y: scroll;
     position: absolute;
     background: $blanc;
     border-left: 1px solid #E8E8E8;

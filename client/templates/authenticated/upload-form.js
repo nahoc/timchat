@@ -28,7 +28,7 @@ Template.uploadForm.events({
                 }
                 else {
                     let isDirect = false;
-                    let messageText = '<a target="_parent" href="/cdn/storage/files/' + fileObj._id + '/original/' + fileObj._id + fileObj.extension + '"><img src="/cdn/storage/files/' + fileObj._id + '/original/' + fileObj._id + fileObj.extension + '" alt="' + fileObj.name + '" /></a>';
+                    let messageText = '<pre><a target="_parent" href="/cdn/storage/files/' + fileObj._id + '/original/' + fileObj._id + fileObj.extension + '"><img src="/cdn/storage/files/' + fileObj._id + '/original/' + fileObj._id + fileObj.extension + '" alt="' + fileObj.name + '" /></a></pre>';
                     
                     let current = FlowRouter.getParam('channel');
                     if (current) {
