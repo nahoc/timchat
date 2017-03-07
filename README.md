@@ -22,11 +22,4 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Supporte certaines balises HTML comme *H1*, *img* ou *pre*.
 * Le titre de l'onglet suit le nom du channel
 
-##TODO:
-* Ajouté les sons
-* Favicon change lorsqu'on reçoit un nouveau message
-* HTML5 notifications
-* Éditer un message
-* Delete message avec emojis (bug?)
-
 par Cohan Carpentier
