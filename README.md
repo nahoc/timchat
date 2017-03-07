@@ -20,6 +20,7 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Utilisation d'emojis
 * Choisir des emojis à partir d'un tableau
 * Supporte certaines balises HTML comme *H1*, *img* ou *pre*.
+* Le titre de l'onglet suit le nom du channel
 
 ##TODO:
 * Ajouté les sons
