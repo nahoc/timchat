@@ -24,10 +24,32 @@ Template.uploadForm.events({
             });
             upload.on('end', function (error, fileObj) {
                 if (error) {
-                    alert('Error during upload: ' + error);
+                    Bert.alert("Erreur lors du téléversement du fichier.", 'danger');
                 }
                 else {
-                    alert('File "' + fileObj.name + '" successfully uploaded');
+                    let isDirect = false;
+                    let messageText = '<a target="_parent" href="/cdn/storage/files/' + fileObj._id + '/original/' + fileObj._id + fileObj.extension + '"><img src="/cdn/storage/files/' + fileObj._id + '/original/' + fileObj._id + fileObj.extension + '" alt="' + fileObj.name + '" /></a>';
+                    
+                    let current = FlowRouter.getParam('channel');
+                    if (current) {
+                        if (current[0] == "@") {
+                            isDirect = true;
+                        }
+                    }
+                    let message = {
+                        "destination": FlowRouter.getParam('channel').replace('@', '')
+                        , "isDirect": isDirect
+                        , "message": messageText
+                    };
+                    Meteor.call('insertMessage', message, (error) => {
+                        if (error) {
+                            Bert.alert(error.reason, 'danger');
+                        }
+                        else {
+                            event.target.value = '';
+                        }
+                    });
+                    Bert.alert("Fichier téléversé avec succès!", 'success');
                 }
                 template.currentUpload.set(false);
             });

@@ -53,7 +53,11 @@ Template.message.events({
         event.preventDefault();
         // valeur du message
         let messageContent = $(event.currentTarget).next().html();
-        let messageToDelete = Messages.findOne({message:messageContent,owner:Meteor.userId()});
+        console.log(messageContent);
+        let messageToDelete = Messages.findOne({
+            message: messageContent
+            , owner: Meteor.userId()
+        });
         console.log(messageToDelete);
         // on supprime le message de la BD
         Messages.remove(messageToDelete._id);

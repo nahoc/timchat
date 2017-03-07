@@ -29,7 +29,8 @@ let MessagesSchema = new SimpleSchema({
     },
     'timestamp': {
         type: Date,
-        label: 'La date de création du message.'
+        label: 'La date de création du message.',
+        optional: true
     },
     'message': {
         type: String,

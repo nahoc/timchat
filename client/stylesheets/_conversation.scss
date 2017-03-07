@@ -23,6 +23,15 @@ body.is-channel .container {
     width: 100%;
 }
 
+.body {
+    img {
+        margin-top: 5px;
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 5px;
+    }
+}
+
 .logo {
     height: 22px;
     float: left;
