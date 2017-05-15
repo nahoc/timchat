@@ -2,7 +2,8 @@ let _insertMessage = (message) => {
     return Messages.insert(message);
 };
 let _escapeUnwantedMarkdown = (message) => {
-    return message.replace(/#/g, '&#35;').replace(/(!\[.*?\]\()(.*?)(\))+/g, '&#33;&#91;&#93;&#40;&#41;');
+    newMessage = BannedFilter.clean(message);
+    return newMessage.replace(/#/g, '&#35;').replace(/(!\[.*?\]\()(.*?)(\))+/g, '&#33;&#91;&#93;&#40;&#41;');
 };
 let _cleanUpMessageBeforeInsert = (message) => {
     delete message.destination;
