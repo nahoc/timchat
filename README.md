@@ -1,8 +1,8 @@
-#![alt tag](http://i.imgur.com/DDRlMrd.png) timCHAT
+![alt tag](http://i.imgur.com/DDRlMrd.png) timCHAT
 
-Platforme de chat pour la TIM, conçue avec Meteor.js
+Platforme de chat, conçue avec Meteor.js
 
-##Possibilités:
+Features:
 * Création d'un compte à partir de Facebook, Twitter, Google et Github
 * Création d'un compte à partir d'une adresse courriel
 * Réinitialiser son mot de passe
@@ -21,5 +21,6 @@ Platforme de chat pour la TIM, conçue avec Meteor.js
 * Choisir des emojis à partir d'un tableau
 * Supporte certaines balises HTML comme *H1*, *img* ou *pre*.
 * Le titre de l'onglet suit le nom du channel
+* Filtre les messages grossiers
 
 par Cohan Carpentier
