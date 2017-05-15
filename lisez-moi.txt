@@ -1,0 +1,9 @@
+Lisez-moi
+
+Voir le chat:
+https://timchat.herokuapp.com/messages/general
+
+- Mon code client se situe dans le dossier /client
+- Mon code serveur dans le dossier /server
+
+La totalité du code est en JavaScript.
