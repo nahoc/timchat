@@ -66,7 +66,11 @@ Streamy.on('isTyping', function(d) {
     let user = Meteor.users.findOne({
         _id: d.__fromUserId
     });
-    $('#is-typing').html(user.username + " est en train d'écrire");
+    if(user._id == Meteor.userId()) {
+        $('#is-typing').html("");
+    } else {
+        $('#is-typing').html(user.username + " est en train d'écrire");
+    }
 });
 Streamy.on('isNotTyping', function(d) {
     $('#is-typing').html("");
